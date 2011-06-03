@@ -1,0 +1,1251 @@
+Ttr-auth-server
+v7
+r0
+t328718072.411296
+cCheck dependencies
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/main.o /Users/markus/XCodeProjects/tr-auth-server/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/server.o /Users/markus/XCodeProjects/tr-auth-server/server.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/log.o /Users/markus/XCodeProjects/tr-auth-server/log.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/socket.o /Users/markus/XCodeProjects/tr-auth-server/socket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/serversocket.o /Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/PacketBuffer.o /Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/selector.o /Users/markus/XCodeProjects/tr-auth-server/selector.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/chatclient.o /Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/connection.o /Users/markus/XCodeProjects/tr-auth-server/connection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trconnection.o /Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/closeconnectionex.o /Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/crypto.o /Users/markus/XCodeProjects/tr-auth-server/crypto.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/blowfish.o /Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trcrypt.o /Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/md5.o /Users/markus/XCodeProjects/tr-auth-server/md5.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/CryptManager.o /Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/DBMgr.o /Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/GSMgr.o /Users/markus/XCodeProjects/tr-auth-server/GSMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/SessionMgr.o /Users/markus/XCodeProjects/tr-auth-server/SessionMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/ThreadUtils.o /Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004B99A23900000000000000EE
+t1268359737
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netdb.h
+c000000004BBD2D1D000000000000307F
+t1270689053
+s12415
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netinet/in.h
+c000000004CC3DE650000000000005414
+t1287904869
+s21524
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h
+c000000004AC3260600000000000038F0
+t1254303238
+s14576
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/standards.h
+c000000004AC32606000000000000055B
+t1254303238
+s1371
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004AC326060000000000004174
+t1254303238
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
+c000000004AC326060000000000002DF5
+t1254303238
+s11765
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
+c000000004AC326060000000000001731
+t1254303238
+s5937
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/select.h
+c000000004B56971D00000000000016A2
+t1263965981
+s5794
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/socket.h
+c000000004B56971E00000000000059BC
+t1263965982
+s22972
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/time.h
+c000000004B56971E0000000000001E17
+t1263965982
+s7703
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
+c000000004B56971E0000000000002905
+t1263965982
+s10501
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
+c000000004AC32606000000000000563E
+t1254303238
+s22078
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
+c000000004AC32665000000000000190C
+t1254303333
+s6412
+
+N/Users/markus/XCodeProjects/tr-auth-server/CMSG_AuthSelectServer.h
+c000000004DE68500000000000000032F
+t1306952960
+s815
+i"clientpacket.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp
+c000000004DE66F35000000000000D10E
+t1306947381
+s53518
+i"CryptManager.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/CryptManager.h
+c000000004DE66EE10000000000000C1E
+t1306947297
+s3102
+i"windows.h"
+i<string>
+i"MD5.h"
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp
+c000000004DE78C3D0000000000000A13
+t1307020349
+s2579
+i"DBMgr.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/DBMgr.h
+c000000004DE78BF40000000000000423
+t1307020276
+s1059
+i<mysql.h>
+i<string>
+
+N/Users/markus/XCodeProjects/tr-auth-server/GSMgr.cpp
+c000000004DE78C7A00000000000000A3
+t1307020410
+s163
+i"GSMgr.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/GSMgr.h
+c000000004DE78E4F0000000000000282
+t1307020879
+s642
+i<vector>
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp
+c000000004DE78E040000000000000E8F
+t1307020804
+s3727
+i"PacketBuffer.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.h
+c000000004DE78E5A000000000000072B
+t1307020890
+s1835
+i<iostream>
+i<string>
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SMSG_AuthError.h
+c000000004DE4EF350000000000000266
+t1306849077
+s614
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SMSG_AuthErrorAccountBlocked.h
+c000000004DE65D4E00000000000002BC
+t1306942798
+s700
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SMSG_AuthOk.h
+c000000004DE67D5A00000000000002DE
+t1306951002
+s734
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SMSG_AuthServerList.h
+c000000004DE681520000000000000520
+t1306952018
+s1312
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SMSG_GSHandoff.h
+c000000004DE7937E00000000000002C6
+t1307022206
+s710
+i"serverpacket.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SMSG_HELLO.h
+c000000004DE65D46000000000000022D
+t1306942790
+s557
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SessionMgr.cpp
+c000000004DE7947000000000000005EE
+t1307022448
+s1518
+i"SessionMgr.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/SessionMgr.h
+c000000004DE79F6E00000000000003D3
+t1307025262
+s979
+i"types.h"
+i<ctime>
+i<cstdlib>
+i<sstream>
+i<string>
+i"DBMgr.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.cpp
+c000000004DE79DC100000000000005A9
+t1307024833
+s1449
+i"ThreadUtils.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.h
+c000000004DE79DC30000000000000338
+t1307024835
+s824
+i<pthread.h>
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/authcodes.h
+c000000004DE7905E00000000000002C7
+t1307021406
+s711
+
+N/Users/markus/XCodeProjects/tr-auth-server/basepacket.h
+c000000004DE68467000000000000042F
+t1306952807
+s1071
+
+N/Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp
+c000000004DE78A30000000000000962E
+t1307019824
+s38446
+i"blowfish.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/blowfish.h
+c000000004DE78A3200000000000002FC
+t1307019826
+s764
+i<string>
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server
+t1307025272
+s205328
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/CryptManager.o
+t1307019184
+s81880
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/DBMgr.o
+t1307019184
+s44608
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/PacketBuffer.o
+t1307019183
+s61000
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/blowfish.o
+t1307019184
+s26984
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/chatclient.o
+t1307019183
+s48172
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/closeconnectionex.o
+t1307019183
+s14548
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/connection.o
+t1307019183
+s83788
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/crypto.o
+t1307019184
+s56964
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/log.o
+t1307019183
+s69836
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/main.o
+t1307019183
+s85180
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/md5.o
+t1307019184
+s84124
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/selector.o
+t1307019183
+s55140
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/server.o
+t1307019183
+s126784
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/serversocket.o
+t1307019183
+s57748
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/socket.o
+t1307019183
+s65536
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/tr-auth-server.LinkFileList
+c000000004DE787AF0000000000000885
+t1307019183
+s2181
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trconnection.o
+t1307019184
+s96776
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trcrypt.o
+t1307019184
+s33672
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/CryptManager.o
+t1307025272
+s90256
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/DBMgr.o
+t1307025272
+s48320
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/GSMgr.o
+t1307025272
+s13472
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/PacketBuffer.o
+t1307025271
+s64860
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/SessionMgr.o
+t1307025272
+s77528
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/ThreadUtils.o
+t1307025272
+s10268
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/blowfish.o
+t1307025271
+s28156
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/chatclient.o
+t1307025271
+s48864
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/closeconnectionex.o
+t1307025271
+s14772
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/connection.o
+t1307025271
+s87612
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/crypto.o
+t1307025271
+s58300
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/log.o
+t1307025271
+s70808
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/main.o
+t1307025271
+s91440
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/md5.o
+t1307025272
+s86060
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/selector.o
+t1307025271
+s57760
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/server.o
+t1307025271
+s143936
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/server_socket.o
+t2
+s0
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/serversocket.o
+t1307025271
+s59088
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/socket.o
+t1307025271
+s68644
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/tr-auth-server.LinkFileList
+c000000004DE79F760000000000000A2F
+t1307025270
+s2607
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trconnection.o
+t1307025271
+s103972
+
+N/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trcrypt.o
+t1307025272
+s36320
+
+N/Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp
+c000000004DE2F8CA00000000000000A4
+t1306720458
+s164
+i"chatclient.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/chatclient.h
+c000000004DE65DBC0000000000000380
+t1306942908
+s896
+i"log.h"
+i"socket.h"
+i"PacketBuffer.h"
+i"selector.h"
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/clientpacket.h
+c000000004DE685870000000000000316
+t1306953095
+s790
+i"basepacket.h"
+i"PacketBuffer.h"
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp
+c000000004DE3EEE700000000000000B2
+t1306783463
+s178
+i"closeconnectionex.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.h
+c000000004DE3EF280000000000000197
+t1306783528
+s407
+i<string>
+
+N/Users/markus/XCodeProjects/tr-auth-server/connection.cpp
+c000000004DE688800000000000000646
+t1306953856
+s1606
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/connection.h
+c000000004DE7884D0000000000000548
+t1307019341
+s1352
+i<vector>
+i<string>
+i<cstdlib>
+i<cstdio>
+i"socket.h"
+i"selector.h"
+i"PacketBuffer.h"
+i"closeconnectionex.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/crypto.cpp
+c000000004DE6714B00000000000003ED
+t1306947915
+s1005
+i"crypto.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/crypto.h
+c000000004DE66F5B0000000000000292
+t1306947419
+s658
+i<string>
+i"blowfish.h"
+i"trcrypt.h"
+i"md5.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/log.cpp
+c000000004DE65D140000000000000264
+t1306942740
+s612
+i"log.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/log.h
+c000000004DE65D1900000000000003B6
+t1306942745
+s950
+i<iostream>
+i<string>
+
+N/Users/markus/XCodeProjects/tr-auth-server/main.cpp
+c000000004DE79F5800000000000006A9
+t1307025240
+s1705
+i<iostream>
+i<string>
+i"server.h"
+i"crypto.h"
+i"DBMgr.h"
+i"SessionMgr.h"
+i"ThreadUtils.h"
+i<pthread.h>
+
+N/Users/markus/XCodeProjects/tr-auth-server/md5.cpp
+c000000004DE4D4D100000000000028A6
+t1306842321
+s10406
+i"md5.h"
+i"md5.h"
+i<stdio.h>
+
+N/Users/markus/XCodeProjects/tr-auth-server/md5.h
+c000000004DE4D4B40000000000000C8E
+t1306842292
+s3214
+i<string>
+i<iostream>
+
+N/Users/markus/XCodeProjects/tr-auth-server/selector.cpp
+c000000004DE2F7640000000000000A90
+t1306720100
+s2704
+i"selector.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/selector.h
+c000000004DE65DB10000000000000495
+t1306942897
+s1173
+i<sys/select.h>
+i<sys/time.h>
+i<sys/types.h>
+i<unistd.h>
+i<vector>
+i"log.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/server.cpp
+c000000004DE7952D0000000000000B54
+t1307022637
+s2900
+i"server.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/server.h
+c000000004DE6695900000000000004A4
+t1306945881
+s1188
+i<vector>
+i"serversocket.h"
+i"log.h"
+i"selector.h"
+i"PacketBuffer.h"
+i"connection.h"
+i"trconnection.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/server_socket.cpp
+c000000004D7D487F00000000000000AA
+t1300056191
+s170
+i"server_socket.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/server_socket.h
+c000000004D7D49C3000000000000018D
+t1300056515
+s397
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<unistd.h>
+i<sys/types.h>
+i<sys/socket.h>
+i<netinet/in.h>
+
+N/Users/markus/XCodeProjects/tr-auth-server/serverpacket.h
+c000000004DE6844600000000000003DA
+t1306952774
+s986
+i"basepacket.h"
+i"PacketBuffer.h"
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp
+c000000004DE7898E00000000000007E8
+t1307019662
+s2024
+i"serversocket.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/serversocket.h
+c000000004DE7899500000000000003B3
+t1307019669
+s947
+i<sys/socket.h>
+i<sys/types.h>
+i<unistd.h>
+i<netdb.h>
+i"log.h"
+i"socket.h"
+i"selector.h"
+i<string>
+
+N/Users/markus/XCodeProjects/tr-auth-server/socket.cpp
+c000000004DE688930000000000000C53
+t1306953875
+s3155
+i"socket.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/socket.h
+c000000004DE65D8F0000000000000556
+t1306942863
+s1366
+i<sys/socket.h>
+i<sys/types.h>
+i<unistd.h>
+i<netdb.h>
+i"log.h"
+i"packetbuffer.h"
+i"selector.h"
+i<cstdlib>
+i<sstream>
+i<string>
+i"closeconnectionex.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp
+c000000004DE796280000000000001512
+t1307022888
+s5394
+i"trconnection.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/trconnection.h
+c000000004DE7954D0000000000000565
+t1307022669
+s1381
+i"connection.h"
+i"log.h"
+i"crypto.h"
+i"authcodes.h"
+i"DBMgr.h"
+i"SessionMgr.h"
+i<string>
+i"SMSG_HELLO.h"
+i"SMSG_AuthError.h"
+i"SMSG_AuthErrorAccountBlocked.h"
+i"SMSG_AuthOk.h"
+i"SMSG_AuthServerList.h"
+i"SMSG_GSHandoff.h"
+i"CMSG_AuthSelectServer.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp
+c000000004DE65CFE0000000000003798
+t1306942718
+s14232
+i"trcrypt.h"
+
+N/Users/markus/XCodeProjects/tr-auth-server/trcrypt.h
+c000000004DE65D03000000000000093F
+t1306942723
+s2367
+i"types.h"
+i<string>
+
+N/Users/markus/XCodeProjects/tr-auth-server/types.h
+c000000004DE78A710000000000000201
+t1307019889
+s513
+i<stdint.h>
+
+N/usr/local/mysql/include/my_alloc.h
+c000000004DCA78E30000000000000753
+t1305114851
+s1875
+
+N/usr/local/mysql/include/my_list.h
+c000000004DCA78E300000000000005B1
+t1305114851
+s1457
+
+N/usr/local/mysql/include/mysql.h
+c000000004DCA78E30000000000006DF4
+t1305114851
+s28148
+i<standards.h>
+i<sys/types.h>
+i<winsock2.h>
+i"mysql_version.h"
+i"mysql_com.h"
+i"mysql_time.h"
+i"my_list.h"
+i"typelib.h"
+i"my_alloc.h"
+
+N/usr/local/mysql/include/mysql_com.h
+c000000004DCA78E30000000000005774
+t1305114851
+s22388
+
+N/usr/local/mysql/include/mysql_time.h
+c000000004DCA78E30000000000000831
+t1305114851
+s2097
+
+N/usr/local/mysql/include/mysql_version.h
+c000000004DCB01AA0000000000000334
+t1305149866
+s820
+i<custom_conf.h>
+
+N/usr/local/mysql/include/typelib.h
+c000000004DCA78E300000000000008E6
+t1305114851
+s2278
+i"my_alloc.h"
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies328718070#328718070#0(0"0(0#1#0"8619256480#0"0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/CryptManager.o /Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711984.047506
+e328711984.353270
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/CryptManager.o
+x/Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp328711984#328711984#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp8619413344#1501"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/CryptManager.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/DBMgr.o /Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711984.065047
+e328711984.242482
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/DBMgr.o
+x/Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp328711984#328711984#0(0"0(0#0#52"/Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp8619043040#1487"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/DBMgr.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/PacketBuffer.o /Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.393469
+e328711983.683054
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/PacketBuffer.o
+x/Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp328711983#328711983#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp8618172128#1501"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/PacketBuffer.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/blowfish.o /Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.841118
+e328711984.019301
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/blowfish.o
+x/Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp328711983#328711984#0(0"0(0#0#55"/Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp8618347296#1493"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/blowfish.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/chatclient.o /Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.452018
+e328711983.762162
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/chatclient.o
+x/Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp328711983#328711983#0(0"0(0#0#57"/Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp8616067840#1497"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/chatclient.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/closeconnectionex.o /Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.699204
+e328711983.841042
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/closeconnectionex.o
+x/Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp328711983#328711983#0(0"0(0#0#64"/Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp8618936096#1511"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/closeconnectionex.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/connection.o /Users/markus/XCodeProjects/tr-auth-server/connection.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.654243
+e328711984.001068
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/connection.o
+x/Users/markus/XCodeProjects/tr-auth-server/connection.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-auth-server/connection.cpp328711983#328711984#0(0"0(0#0#57"/Users/markus/XCodeProjects/tr-auth-server/connection.cpp8619915840#1497"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/connection.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/connection.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/crypto.o /Users/markus/XCodeProjects/tr-auth-server/crypto.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.762240
+e328711984.047432
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/crypto.o
+x/Users/markus/XCodeProjects/tr-auth-server/crypto.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-auth-server/crypto.cpp328711983#328711984#0(0"0(0#0#53"/Users/markus/XCodeProjects/tr-auth-server/crypto.cpp8618788000#1489"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/crypto.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/crypto.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/log.o /Users/markus/XCodeProjects/tr-auth-server/log.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.037657
+e328711983.325911
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/log.o
+x/Users/markus/XCodeProjects/tr-auth-server/log.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/markus/XCodeProjects/tr-auth-server/log.cpp328711983#328711983#0(0"0(0#0#50"/Users/markus/XCodeProjects/tr-auth-server/log.cpp8614988352#1483"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/log.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/log.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/main.o /Users/markus/XCodeProjects/tr-auth-server/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.036378
+e328711983.393374
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/main.o
+x/Users/markus/XCodeProjects/tr-auth-server/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/markus/XCodeProjects/tr-auth-server/main.cpp328711983#328711983#0(0"0(0#0#51"/Users/markus/XCodeProjects/tr-auth-server/main.cpp8618173856#1485"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/main.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/main.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/md5.o /Users/markus/XCodeProjects/tr-auth-server/md5.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711984.019381
+e328711984.321005
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/md5.o
+x/Users/markus/XCodeProjects/tr-auth-server/md5.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/markus/XCodeProjects/tr-auth-server/md5.cpp328711984#328711984#0(0"0(0#0#50"/Users/markus/XCodeProjects/tr-auth-server/md5.cpp8619965504#1483"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/md5.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/md5.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/selector.o /Users/markus/XCodeProjects/tr-auth-server/selector.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.394434
+e328711983.699126
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/selector.o
+x/Users/markus/XCodeProjects/tr-auth-server/selector.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/markus/XCodeProjects/tr-auth-server/selector.cpp328711983#328711983#0(0"0(0#0#55"/Users/markus/XCodeProjects/tr-auth-server/selector.cpp8615447008#1493"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/selector.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/selector.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/server.o /Users/markus/XCodeProjects/tr-auth-server/server.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.037069
+e328711983.451938
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/server.o
+x/Users/markus/XCodeProjects/tr-auth-server/server.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-auth-server/server.cpp328711983#328711983#0(0"0(0#0#53"/Users/markus/XCodeProjects/tr-auth-server/server.cpp8616420000#1489"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/server.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/server.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/serversocket.o /Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.325992
+e328711983.654164
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/serversocket.o
+x/Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp328711983#328711983#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp8618488160#1501"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/serversocket.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/socket.o /Users/markus/XCodeProjects/tr-auth-server/socket.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.038247
+e328711983.394374
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/socket.o
+x/Users/markus/XCodeProjects/tr-auth-server/socket.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-auth-server/socket.cpp328711983#328711983#0(0"0(0#0#53"/Users/markus/XCodeProjects/tr-auth-server/socket.cpp8609967520#1489"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/socket.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/socket.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trconnection.o /Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711983.683131
+e328711984.064971
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trconnection.o
+x/Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp328711983#328711984#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp8619223488#1501"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trconnection.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trcrypt.o /Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s328711984.001138
+e328711984.192114
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trcrypt.o
+x/Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp328711984#328711984#0(0"0(0#0#54"/Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp8620337248#1491"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/i386 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/trcrypt.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/CryptManager.o /Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.907384
+e328718072.233307
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/CryptManager.o
+x/Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp328718071#328718072#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp8626453152#1507"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/CryptManager.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/CryptManager.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/DBMgr.o /Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.925929
+e328718072.112951
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/DBMgr.o
+x/Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp328718071#328718072#0(0"0(0#0#52"/Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp8627511328#1493"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/DBMgr.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/DBMgr.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/GSMgr.o /Users/markus/XCodeProjects/tr-auth-server/GSMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718072.058634
+e328718072.163284
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/GSMgr.o
+x/Users/markus/XCodeProjects/tr-auth-server/GSMgr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/markus/XCodeProjects/tr-auth-server/GSMgr.cpp328718072#328718072#0(0"0(0#0#52"/Users/markus/XCodeProjects/tr-auth-server/GSMgr.cpp8626476032#1493"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/GSMgr.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/GSMgr.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/PacketBuffer.o /Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.208661
+e328718071.519377
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/PacketBuffer.o
+x/Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp328718071#328718071#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp8626536800#1507"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/PacketBuffer.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/PacketBuffer.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/SessionMgr.o /Users/markus/XCodeProjects/tr-auth-server/SessionMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718072.113024
+e328718072.384564
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/SessionMgr.o
+x/Users/markus/XCodeProjects/tr-auth-server/SessionMgr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-auth-server/SessionMgr.cpp328718072#328718072#0(0"0(0#0#57"/Users/markus/XCodeProjects/tr-auth-server/SessionMgr.cpp8626108864#1503"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/SessionMgr.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/SessionMgr.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/ThreadUtils.o /Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718072.163361
+e328718072.192379
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/ThreadUtils.o
+x/Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.cpp328718072#328718072#0(0"0(0#0#58"/Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.cpp8625919904#1505"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/ThreadUtils.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/ThreadUtils.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/blowfish.o /Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.710029
+e328718071.884075
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/blowfish.o
+x/Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp328718071#328718071#0(0"0(0#0#55"/Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp8626604800#1499"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/blowfish.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/blowfish.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/chatclient.o /Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.305281
+e328718071.618860
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/chatclient.o
+x/Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp328718071#328718071#0(0"0(0#0#57"/Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp8626889056#1503"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/chatclient.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/chatclient.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/closeconnectionex.o /Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.561448
+e328718071.709954
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/closeconnectionex.o
+x/Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp328718071#328718071#0(0"0(0#0#64"/Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp8618944160#1517"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/closeconnectionex.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/closeconnectionex.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/connection.o /Users/markus/XCodeProjects/tr-auth-server/connection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.509318
+e328718071.852917
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/connection.o
+x/Users/markus/XCodeProjects/tr-auth-server/connection.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-auth-server/connection.cpp328718071#328718071#0(0"0(0#0#57"/Users/markus/XCodeProjects/tr-auth-server/connection.cpp8622052736#1503"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/connection.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/connection.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/crypto.o /Users/markus/XCodeProjects/tr-auth-server/crypto.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.618938
+e328718071.907250
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/crypto.o
+x/Users/markus/XCodeProjects/tr-auth-server/crypto.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-auth-server/crypto.cpp328718071#328718071#0(0"0(0#0#53"/Users/markus/XCodeProjects/tr-auth-server/crypto.cpp8627419360#1495"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/crypto.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/crypto.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/log.o /Users/markus/XCodeProjects/tr-auth-server/log.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718070.848633
+e328718071.148073
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/log.o
+x/Users/markus/XCodeProjects/tr-auth-server/log.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/markus/XCodeProjects/tr-auth-server/log.cpp328718070#328718071#0(0"0(0#0#50"/Users/markus/XCodeProjects/tr-auth-server/log.cpp8626471520#1489"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/log.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/log.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/main.o /Users/markus/XCodeProjects/tr-auth-server/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718070.847356
+e328718071.234125
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/main.o
+x/Users/markus/XCodeProjects/tr-auth-server/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/markus/XCodeProjects/tr-auth-server/main.cpp328718070#328718071#0(0"0(0#0#51"/Users/markus/XCodeProjects/tr-auth-server/main.cpp8627116192#1491"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/main.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/md5.o /Users/markus/XCodeProjects/tr-auth-server/md5.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.884147
+e328718072.200297
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/md5.o
+x/Users/markus/XCodeProjects/tr-auth-server/md5.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/markus/XCodeProjects/tr-auth-server/md5.cpp328718071#328718072#0(0"0(0#0#50"/Users/markus/XCodeProjects/tr-auth-server/md5.cpp8619150944#1489"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/md5.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/md5.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/selector.o /Users/markus/XCodeProjects/tr-auth-server/selector.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.234203
+e328718071.561368
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/selector.o
+x/Users/markus/XCodeProjects/tr-auth-server/selector.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/markus/XCodeProjects/tr-auth-server/selector.cpp328718071#328718071#0(0"0(0#0#55"/Users/markus/XCodeProjects/tr-auth-server/selector.cpp8626471328#1499"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/selector.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/selector.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/server.o /Users/markus/XCodeProjects/tr-auth-server/server.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718070.848025
+e328718071.305206
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/server.o
+x/Users/markus/XCodeProjects/tr-auth-server/server.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-auth-server/server.cpp328718070#328718071#0(0"0(0#0#53"/Users/markus/XCodeProjects/tr-auth-server/server.cpp8626921856#1495"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/server.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/server.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/server_socket.o /Users/markus/XCodeProjects/tr-auth-server/server_socket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/serversocket.o /Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.148164
+e328718071.509235
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/serversocket.o
+x/Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp328718071#328718071#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp8626768992#1507"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/serversocket.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/serversocket.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/socket.o /Users/markus/XCodeProjects/tr-auth-server/socket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718070.849259
+e328718071.208584
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/socket.o
+x/Users/markus/XCodeProjects/tr-auth-server/socket.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-auth-server/socket.cpp328718070#328718071#0(0"0(0#0#53"/Users/markus/XCodeProjects/tr-auth-server/socket.cpp8626311232#1495"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/socket.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/socket.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trconnection.o /Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.519453
+e328718071.925854
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trconnection.o
+x/Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp328718071#328718071#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp8619250080#1507"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/trconnection.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trconnection.o0#
+
+CCompileC build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trcrypt.o /Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328718071.852989
+e328718072.058554
+r1
+xCompileC
+xbuild/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trcrypt.o
+x/Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp328718071#328718072#0(0"0(0#0#54"/Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp8626015520#1497"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -w -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/tr-auth-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -I/Users/markus/XCodeProjects/tr-auth-server/build/Debug/include -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-auth-server/trcrypt.cpp -o /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/trcrypt.o0#
+
+CLd /Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server normal i386
+s328711984.353342
+e328711984.376044
+r0
+xLd
+x/Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server
+xnormal
+xi386
+old: warning: in /Users/markus/XCodeProjects/tr-auth-server/build/Debug/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (i386)
+oUndefined symbols:
+o  "_mysql_fetch_row", referenced from:
+o      tr::util::DBMgr::fetch_row(st_mysql_res*)    in DBMgr.o
+o  "_mysql_num_rows", referenced from:
+o      tr::util::DBMgr::num_rows(st_mysql_res*)    in DBMgr.o
+o  "_mysql_free_result", referenced from:
+o      tr::util::DBMgr::free_result(st_mysql_res*)     in DBMgr.o
+o  "_mysql_real_connect", referenced from:
+o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o
+o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o
+o  "_mysql_query", referenced from:
+o      tr::util::DBMgr::query(char const*)in DBMgr.o
+o  "_mysql_error", referenced from:
+o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o
+o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o
+o  "_mysql_store_result", referenced from:
+o      tr::util::DBMgr::store_result()    in DBMgr.o
+o  "_mysql_init", referenced from:
+o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o
+o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o
+old: symbol(s) not found
+ocollect2: ld returned 1 exit status
+lSLF07#2@74"Link /Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server328711984#328711984#0(1493"ld: warning: in /Users/markus/XCodeProjects/tr-auth-server/build/Debug/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (i386)Undefined symbols:  "_mysql_fetch_row", referenced from:      tr::util::DBMgr::fetch_row(st_mysql_res*)    in DBMgr.o  "_mysql_num_rows", referenced from:      tr::util::DBMgr::num_rows(st_mysql_res*)    in DBMgr.o  "_mysql_free_result", referenced from:      tr::util::DBMgr::free_result(st_mysql_res*)     in DBMgr.o  "_mysql_real_connect", referenced from:      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o  "_mysql_query", referenced from:      tr::util::DBMgr::query(char const*)in DBMgr.o  "_mysql_error", referenced from:      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o  "_mysql_store_result", referenced from:      tr::util::DBMgr::store_result()    in DBMgr.o  "_mysql_init", referenced from:      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o      tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.old: symbol(s) not foundcollect2: ld returned 1 exit status22(22@172"In /Users/markus/XCodeProjects/tr-auth-server/build/Debug/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (i386)328711984#0#186#0(6@0"328711984#0#0#0#0#0"0(4@36""_mysql_fetch_row", referenced from:328711984#205#39#0(6@0"328711984#0#0#0#0#0"0(13@55"Tr::util::DBMgr::fetch_row(st_mysql_res*)    in DBMgr.o328711984#244#62#0(6@0"328711984#0#0#0#0#0"0(4@35""_mysql_num_rows", referenced from:328711984#306#38#0(6@0"328711984#0#0#0#0#0"0(13@54"Tr::util::DBMgr::num_rows(st_mysql_res*)    in DBMgr.o328711984#344#61#0(6@0"328711984#0#0#0#0#0"0(4@38""_mysql_free_result", referenced from:328711984#405#41#0(6@0"328711984#0#0#0#0#0"0(13@58"Tr::util::DBMgr::free_result(st_mysql_res*)     in DBMgr.o328711984#446#65#0(6@0"328711984#0#0#0#0#0"0(4@39""_mysql_real_connect", referenced from:328711984#511#42#0(6@0"328711984#0#0#0#0#0"0(13@98"Tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o328711984#553#105#0(6@0"328711984#0#0#0#0#0"0(13@98"Tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o328711984#658#105#0(6@0"328711984#0#0#0#0#0"0(4@32""_mysql_query", referenced from:328711984#763#35#0(6@0"328711984#0#0#0#0#0"0(13@45"Tr::util::DBMgr::query(char const*)in DBMgr.o328711984#798#52#0(6@0"328711984#0#0#0#0#0"0(4@32""_mysql_error", referenced from:328711984#850#35#0(6@0"328711984#0#0#0#0#0"0(13@98"Tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o328711984#885#105#0(6@0"328711984#0#0#0#0#0"0(13@98"Tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o328711984#990#105#0(6@0"328711984#0#0#0#0#0"0(4@39""_mysql_store_result", referenced from:328711984#1095#42#0(6@0"328711984#0#0#0#0#0"0(13@45"Tr::util::DBMgr::store_result()    in DBMgr.o328711984#1137#52#0(6@0"328711984#0#0#0#0#0"0(4@31""_mysql_init", referenced from:328711984#1189#34#0(6@0"328711984#0#0#0#0#0"0(13@98"Tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o328711984#1223#105#0(6@0"328711984#0#0#0#0#0"0(13@98"Tr::util::DBMgr::DBMgr(char const*, unsigned int, char const*, char const*, char const*)in DBMgr.o328711984#1328#105#0(6@0"328711984#0#0#0#0#0"0(13@19"Symbol(s) not found328711984#1433#24#0(6@0"328711984#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status328711984#1457#36#0(6@0"328711984#0#0#0#0#0"0(0#0#0"8618965312#587"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/markus/XCodeProjects/tr-auth-server/build/Debug -L/usr/local/mysql/lib -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -filelist /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/i386/tr-auth-server.LinkFileList -mmacosx-version-min=10.6 -lz -lm -lmysqlclient -o /Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server1#
+
+CLd /Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server normal x86_64
+s328718072.384712
+e328718072.411261
+r1
+xLd
+x/Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server
+xnormal
+xx86_64
+lSLF07#2@74"Link /Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server328718072#328718072#0(0"0(0#0#0"8627654592#591"    cd /Users/markus/XCodeProjects/tr-auth-server    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/markus/XCodeProjects/tr-auth-server/build/Debug -L/usr/local/mysql/lib -F/Users/markus/XCodeProjects/tr-auth-server/build/Debug -filelist /Users/markus/XCodeProjects/tr-auth-server/build/tr-auth-server.build/Debug/tr-auth-server.build/Objects-normal/x86_64/tr-auth-server.LinkFileList -mmacosx-version-min=10.6 -lz -lm -lmysqlclient -o /Users/markus/XCodeProjects/tr-auth-server/build/Debug/tr-auth-server0#
+

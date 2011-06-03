@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:tr-auth-server/tr-auth-server.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:tr-game-server/tr-game-server.xcodeproj">
+   </FileRef>
+</Workspace>

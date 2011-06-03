@@ -1,0 +1,993 @@
+Ttr-game-server
+v7
+r0
+t328799210.695830
+cCheck dependencies
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/DBMgr.o /Users/markus/XCodeProjects/tr-game-server/DBMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/main.o /Users/markus/XCodeProjects/tr-game-server/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/ThreadUtils.o /Users/markus/XCodeProjects/tr-game-server/ThreadUtils.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trconnection.o /Users/markus/XCodeProjects/tr-game-server/trconnection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/server.o /Users/markus/XCodeProjects/tr-game-server/server.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/SessionMgr.o /Users/markus/XCodeProjects/tr-game-server/SessionMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/PacketBuffer.o /Users/markus/XCodeProjects/tr-game-server/PacketBuffer.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/GSMgr.o /Users/markus/XCodeProjects/tr-game-server/GSMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/blowfish.o /Users/markus/XCodeProjects/tr-game-server/blowfish.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/serversocket.o /Users/markus/XCodeProjects/tr-game-server/serversocket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/socket.o /Users/markus/XCodeProjects/tr-game-server/socket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/connection.o /Users/markus/XCodeProjects/tr-game-server/connection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/crypto.o /Users/markus/XCodeProjects/tr-game-server/crypto.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/CryptManager.o /Users/markus/XCodeProjects/tr-game-server/CryptManager.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/log.o /Users/markus/XCodeProjects/tr-game-server/log.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt.o /Users/markus/XCodeProjects/tr-game-server/trcrypt.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/md5.o /Users/markus/XCodeProjects/tr-game-server/md5.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/closeconnectionex.o /Users/markus/XCodeProjects/tr-game-server/closeconnectionex.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/chatclient.o /Users/markus/XCodeProjects/tr-game-server/chatclient.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/selector.o /Users/markus/XCodeProjects/tr-game-server/selector.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt2.o /Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/rsa.o /Users/markus/XCodeProjects/tr-game-server/rsa.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/markus/XCodeProjects/tr-game-server/build/Debug/tr-game-server normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004B99A23900000000000000EE
+t1268359737
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netdb.h
+c000000004BBD2D1D000000000000307F
+t1270689053
+s12415
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl
+c000000004DC57C7000000000000009B2
+t1304788080
+s2482
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl/bn.h
+c000000004B68FBA7000000000000831A
+t1265171367
+s33562
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl/engine.h
+c000000004B68FBA70000000000009687
+t1265171367
+s38535
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl/rsa.h
+c000000004B68FBA70000000000004C73
+t1265171367
+s19571
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h
+c000000004AC3260600000000000038F0
+t1254303238
+s14576
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/standards.h
+c000000004AC32606000000000000055B
+t1254303238
+s1371
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004AC326060000000000004174
+t1254303238
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/select.h
+c000000004B56971D00000000000016A2
+t1263965981
+s5794
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/socket.h
+c000000004B56971E00000000000059BC
+t1263965982
+s22972
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/time.h
+c000000004B56971E0000000000001E17
+t1263965982
+s7703
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
+c000000004B56971E0000000000002905
+t1263965982
+s10501
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
+c000000004AC32606000000000000563E
+t1254303238
+s22078
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
+c000000004AC32665000000000000190C
+t1254303333
+s6412
+
+N/Users/markus/XCodeProjects/tr-game-server/CMSG_AuthSelectServer.h
+c000000004DE68500000000000000032F
+t1306952960
+s815
+i"clientpacket.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/CryptManager.cpp
+c000000004DE66F35000000000000D10E
+t1306947381
+s53518
+i"CryptManager.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/CryptManager.h
+c000000004DE66EE10000000000000C1E
+t1306947297
+s3102
+i"windows.h"
+i<string>
+i"MD5.h"
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/DBMgr.cpp
+c000000004DE7A1C90000000000000A34
+t1307025865
+s2612
+i"DBMgr.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/DBMgr.h
+c000000004DE78BF40000000000000423
+t1307020276
+s1059
+i<mysql.h>
+i<string>
+
+N/Users/markus/XCodeProjects/tr-game-server/GSMgr.cpp
+c000000004DE78C7A00000000000000A3
+t1307020410
+s163
+i"GSMgr.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/GSMgr.h
+c000000004DE78E4F0000000000000282
+t1307020879
+s642
+i<vector>
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/PacketBuffer.cpp
+c000000004DE8DACD0000000000000F1A
+t1307105997
+s3866
+i"PacketBuffer.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/PacketBuffer.h
+c000000004DE8DB18000000000000075D
+t1307106072
+s1885
+i<iostream>
+i<string>
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SMSG_AuthError.h
+c000000004DE4EF350000000000000266
+t1306849077
+s614
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SMSG_AuthErrorAccountBlocked.h
+c000000004DE65D4E00000000000002BC
+t1306942798
+s700
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SMSG_AuthOk.h
+c000000004DE67D5A00000000000002DE
+t1306951002
+s734
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SMSG_AuthServerList.h
+c000000004DE681520000000000000520
+t1306952018
+s1312
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SMSG_GSHandoff.h
+c000000004DE7937E00000000000002C6
+t1307022206
+s710
+i"serverpacket.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SMSG_HELLO.h
+c000000004DE65D46000000000000022D
+t1306942790
+s557
+i"serverpacket.h"
+i"authcodes.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SessionMgr.cpp
+c000000004DE7947000000000000005EE
+t1307022448
+s1518
+i"SessionMgr.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/SessionMgr.h
+c000000004DE7A26A000000000000046A
+t1307026026
+s1130
+i"types.h"
+i<ctime>
+i<cstdlib>
+i<sstream>
+i<string>
+i"DBMgr.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.cpp
+c000000004DE79DC100000000000005A9
+t1307024833
+s1449
+i"ThreadUtils.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.h
+c000000004DE79DC30000000000000338
+t1307024835
+s824
+i<pthread.h>
+i"types.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/authcodes.h
+c000000004DE7905E00000000000002C7
+t1307021406
+s711
+
+N/Users/markus/XCodeProjects/tr-game-server/basepacket.h
+c000000004DE68467000000000000042F
+t1306952807
+s1071
+
+N/Users/markus/XCodeProjects/tr-game-server/blowfish.cpp
+c000000004DE78A30000000000000962E
+t1307019824
+s38446
+i"blowfish.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/blowfish.h
+c000000004DE8CFCB00000000000002EC
+t1307103179
+s748
+i<string>
+
+N/Users/markus/XCodeProjects/tr-game-server/build/Debug/tr-game-server
+t1307106410
+s221784
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/CryptManager.o
+t1307047512
+s90256
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/DBMgr.o
+t1307047511
+s48352
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/GSMgr.o
+t1307047511
+s13472
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/PacketBuffer.o
+t1307106072
+s65636
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/SessionMgr.o
+t1307047511
+s77528
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/ThreadUtils.o
+t1307047511
+s10268
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/blowfish.o
+t1307103180
+s28252
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/chatclient.o
+t1307106073
+s48960
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/closeconnectionex.o
+t1307047512
+s14772
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/connection.o
+t1307106073
+s87708
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/crypto.o
+t1307105706
+s63952
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/log.o
+t1307047512
+s70808
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/main.o
+t1307106072
+s92148
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/md5.o
+t1307047512
+s86060
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/rsa.o
+t1307105706
+s8836
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/selector.o
+t1307047512
+s57760
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/server.o
+t1307106073
+s148144
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/serversocket.o
+t1307106073
+s59176
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/socket.o
+t1307106073
+s68740
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/tr-game-server.LinkFileList
+c000000004DE8CF9E0000000000000B2E
+t1307103134
+s2862
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trconnection.o
+t1307106410
+s107776
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt.o
+t1307047512
+s36320
+
+N/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt2.o
+t1307047761
+s68948
+
+N/Users/markus/XCodeProjects/tr-game-server/chatclient.cpp
+c000000004DE2F8CA00000000000000A4
+t1306720458
+s164
+i"chatclient.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/chatclient.h
+c000000004DE65DBC0000000000000380
+t1306942908
+s896
+i"log.h"
+i"socket.h"
+i"PacketBuffer.h"
+i"selector.h"
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/clientpacket.h
+c000000004DE685870000000000000316
+t1306953095
+s790
+i"basepacket.h"
+i"PacketBuffer.h"
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/closeconnectionex.cpp
+c000000004DE3EEE700000000000000B2
+t1306783463
+s178
+i"closeconnectionex.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/closeconnectionex.h
+c000000004DE3EF280000000000000197
+t1306783528
+s407
+i<string>
+
+N/Users/markus/XCodeProjects/tr-game-server/connection.cpp
+c000000004DE688800000000000000646
+t1306953856
+s1606
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/connection.h
+c000000004DE7884D0000000000000548
+t1307019341
+s1352
+i<vector>
+i<string>
+i<cstdlib>
+i<cstdio>
+i"socket.h"
+i"selector.h"
+i"PacketBuffer.h"
+i"closeconnectionex.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/crypto.cpp
+c000000004DE8CF6C0000000000000404
+t1307103084
+s1028
+i"crypto.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/crypto.h
+c000000004DE8CF7800000000000002EE
+t1307103096
+s750
+i<string>
+i"blowfish.h"
+i"trcrypt.h"
+i"trcrypt2.h"
+i"rsa.h"
+i"md5.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/log.cpp
+c000000004DE65D140000000000000264
+t1306942740
+s612
+i"log.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/log.h
+c000000004DE65D1900000000000003B6
+t1306942745
+s950
+i<iostream>
+i<string>
+
+N/Users/markus/XCodeProjects/tr-game-server/main.cpp
+c000000004DE7A51100000000000004D9
+t1307026705
+s1241
+i<iostream>
+i<string>
+i"server.h"
+i"crypto.h"
+i"DBMgr.h"
+i"SessionMgr.h"
+i"ThreadUtils.h"
+i<pthread.h>
+
+N/Users/markus/XCodeProjects/tr-game-server/md5.cpp
+c000000004DE4D4D100000000000028A6
+t1306842321
+s10406
+i"md5.h"
+i"md5.h"
+i<stdio.h>
+
+N/Users/markus/XCodeProjects/tr-game-server/md5.h
+c000000004DE4D4B40000000000000C8E
+t1306842292
+s3214
+i<string>
+i<iostream>
+
+N/Users/markus/XCodeProjects/tr-game-server/rsa.cpp
+c000000004DE8D17B0000000000000269
+t1307103611
+s617
+i"rsa.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/rsa.h
+c000000004DE8D90700000000000002AF
+t1307105543
+s687
+i"types.h"
+i<openssl/rsa.h>
+i<openssl/engine.h>
+
+N/Users/markus/XCodeProjects/tr-game-server/selector.cpp
+c000000004DE2F7640000000000000A90
+t1306720100
+s2704
+i"selector.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/selector.h
+c000000004DE65DB10000000000000495
+t1306942897
+s1173
+i<sys/select.h>
+i<sys/time.h>
+i<sys/types.h>
+i<unistd.h>
+i<vector>
+i"log.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/server.cpp
+c000000004DE7952D0000000000000B54
+t1307022637
+s2900
+i"server.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/server.h
+c000000004DE6695900000000000004A4
+t1306945881
+s1188
+i<vector>
+i"serversocket.h"
+i"log.h"
+i"selector.h"
+i"PacketBuffer.h"
+i"connection.h"
+i"trconnection.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/serverpacket.h
+c000000004DE8D9C300000000000003ED
+t1307105731
+s1005
+i"basepacket.h"
+i"PacketBuffer.h"
+i"connection.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/serversocket.cpp
+c000000004DE7898E00000000000007E8
+t1307019662
+s2024
+i"serversocket.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/serversocket.h
+c000000004DE7899500000000000003B3
+t1307019669
+s947
+i<sys/socket.h>
+i<sys/types.h>
+i<unistd.h>
+i<netdb.h>
+i"log.h"
+i"socket.h"
+i"selector.h"
+i<string>
+
+N/Users/markus/XCodeProjects/tr-game-server/socket.cpp
+c000000004DE688930000000000000C53
+t1306953875
+s3155
+i"socket.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/socket.h
+c000000004DE65D8F0000000000000556
+t1306942863
+s1366
+i<sys/socket.h>
+i<sys/types.h>
+i<unistd.h>
+i<netdb.h>
+i"log.h"
+i"packetbuffer.h"
+i"selector.h"
+i<cstdlib>
+i<sstream>
+i<string>
+i"closeconnectionex.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/trconnection.cpp
+c000000004DE8DD1F00000000000017CE
+t1307106591
+s6094
+i"trconnection.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/trconnection.h
+c000000004DE7954D0000000000000565
+t1307022669
+s1381
+i"connection.h"
+i"log.h"
+i"crypto.h"
+i"authcodes.h"
+i"DBMgr.h"
+i"SessionMgr.h"
+i<string>
+i"SMSG_HELLO.h"
+i"SMSG_AuthError.h"
+i"SMSG_AuthErrorAccountBlocked.h"
+i"SMSG_AuthOk.h"
+i"SMSG_AuthServerList.h"
+i"SMSG_GSHandoff.h"
+i"CMSG_AuthSelectServer.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/trcrypt.cpp
+c000000004DE65CFE0000000000003798
+t1306942718
+s14232
+i"trcrypt.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/trcrypt.h
+c000000004DE65D03000000000000093F
+t1306942723
+s2367
+i"types.h"
+i<string>
+
+N/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp
+c000000004DE7F015000000000000C66E
+t1307045909
+s50798
+i"trcrypt2.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/trcrypt2.h
+c000000004DE7F750000000000000063A
+t1307047760
+s1594
+i"types.h"
+i<string>
+i"md5.h"
+
+N/Users/markus/XCodeProjects/tr-game-server/types.h
+c000000004DE78A710000000000000201
+t1307019889
+s513
+i<stdint.h>
+
+N/usr/local/mysql/include/my_alloc.h
+c000000004DCA78E30000000000000753
+t1305114851
+s1875
+
+N/usr/local/mysql/include/my_list.h
+c000000004DCA78E300000000000005B1
+t1305114851
+s1457
+
+N/usr/local/mysql/include/mysql.h
+c000000004DCA78E30000000000006DF4
+t1305114851
+s28148
+i<standards.h>
+i<sys/types.h>
+i<winsock2.h>
+i"mysql_version.h"
+i"mysql_com.h"
+i"mysql_time.h"
+i"my_list.h"
+i"typelib.h"
+i"my_alloc.h"
+
+N/usr/local/mysql/include/mysql_com.h
+c000000004DCA78E30000000000005774
+t1305114851
+s22388
+
+N/usr/local/mysql/include/mysql_time.h
+c000000004DCA78E30000000000000831
+t1305114851
+s2097
+
+N/usr/local/mysql/include/mysql_version.h
+c000000004DCB01AA0000000000000334
+t1305149866
+s820
+i<custom_conf.h>
+
+N/usr/local/mysql/include/typelib.h
+c000000004DCA78E300000000000008E6
+t1305114851
+s2278
+i"my_alloc.h"
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies328799210#328799210#0(0"0(0#1#0"8619860832#0"0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/CryptManager.o /Users/markus/XCodeProjects/tr-game-server/CryptManager.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740312.207591
+e328740312.579545
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/CryptManager.o
+x/Users/markus/XCodeProjects/tr-game-server/CryptManager.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-game-server/CryptManager.cpp328740312#328740312#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-game-server/CryptManager.cpp8625189440#1557"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/CryptManager.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/CryptManager.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/DBMgr.o /Users/markus/XCodeProjects/tr-game-server/DBMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740311.394261
+e328740311.598042
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/DBMgr.o
+x/Users/markus/XCodeProjects/tr-game-server/DBMgr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/markus/XCodeProjects/tr-game-server/DBMgr.cpp328740311#328740311#0(0"0(0#0#52"/Users/markus/XCodeProjects/tr-game-server/DBMgr.cpp8627626944#1543"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/DBMgr.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/DBMgr.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/GSMgr.o /Users/markus/XCodeProjects/tr-game-server/GSMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740311.763499
+e328740311.876936
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/GSMgr.o
+x/Users/markus/XCodeProjects/tr-game-server/GSMgr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/markus/XCodeProjects/tr-game-server/GSMgr.cpp328740311#328740311#0(0"0(0#0#52"/Users/markus/XCodeProjects/tr-game-server/GSMgr.cpp8627647680#1543"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/GSMgr.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/GSMgr.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/PacketBuffer.o /Users/markus/XCodeProjects/tr-game-server/PacketBuffer.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798872.530913
+e328798872.816094
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/PacketBuffer.o
+x/Users/markus/XCodeProjects/tr-game-server/PacketBuffer.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-game-server/PacketBuffer.cpp328798872#328798872#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-game-server/PacketBuffer.cpp8622820960#1557"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/PacketBuffer.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/PacketBuffer.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/SessionMgr.o /Users/markus/XCodeProjects/tr-game-server/SessionMgr.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740311.598120
+e328740311.932005
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/SessionMgr.o
+x/Users/markus/XCodeProjects/tr-game-server/SessionMgr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-game-server/SessionMgr.cpp328740311#328740311#0(0"0(0#0#57"/Users/markus/XCodeProjects/tr-game-server/SessionMgr.cpp8626759552#1553"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/SessionMgr.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/SessionMgr.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/ThreadUtils.o /Users/markus/XCodeProjects/tr-game-server/ThreadUtils.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740311.395551
+e328740311.426715
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/ThreadUtils.o
+x/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/markus/XCodeProjects/tr-game-server/ThreadUtils.cpp328740311#328740311#0(0"0(0#0#58"/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.cpp8627090176#1555"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/ThreadUtils.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/ThreadUtils.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/blowfish.o /Users/markus/XCodeProjects/tr-game-server/blowfish.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328795979.843928
+e328795980.015814
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/blowfish.o
+x/Users/markus/XCodeProjects/tr-game-server/blowfish.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/markus/XCodeProjects/tr-game-server/blowfish.cpp328795979#328795980#0(0"0(0#0#55"/Users/markus/XCodeProjects/tr-game-server/blowfish.cpp8617430432#1549"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/blowfish.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/blowfish.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/chatclient.o /Users/markus/XCodeProjects/tr-game-server/chatclient.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798873.099577
+e328798873.387902
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/chatclient.o
+x/Users/markus/XCodeProjects/tr-game-server/chatclient.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/markus/XCodeProjects/tr-game-server/chatclient.h:18,
+o                 from /Users/markus/XCodeProjects/tr-game-server/chatclient.cpp:10:
+o/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':
+o/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-game-server/chatclient.cpp328798873#328798873#0(403"In file included from /Users/markus/XCodeProjects/tr-game-server/chatclient.h:18,                 from /Users/markus/XCodeProjects/tr-game-server/chatclient.cpp:10:/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary1(22@32"Returning reference to temporary328798873#301#102#3(7@79"In file included from /Users/markus/XCodeProjects/tr-game-server/chatclient.cpp328798873#18446744073709551615#0#0(6@57"/Users/markus/XCodeProjects/tr-game-server/chatclient.cpp328413258#10#0#10#0#0"0(7@77"In file included from /Users/markus/XCodeProjects/tr-game-server/chatclient.h328798873#18446744073709551615#0#0(6@55"/Users/markus/XCodeProjects/tr-game-server/chatclient.h328635708#18#0#18#0#0"0(13@91"Returning reference to temporary in /Users/markus/XCodeProjects/tr-game-server/connection.h328798873#18446744073709551615#0#0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(0#0#57"/Users/markus/XCodeProjects/tr-game-server/chatclient.cpp8623031008#1553"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/chatclient.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/chatclient.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/closeconnectionex.o /Users/markus/XCodeProjects/tr-game-server/closeconnectionex.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740312.529686
+e328740312.684215
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/closeconnectionex.o
+x/Users/markus/XCodeProjects/tr-game-server/closeconnectionex.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/markus/XCodeProjects/tr-game-server/closeconnectionex.cpp328740312#328740312#0(0"0(0#0#64"/Users/markus/XCodeProjects/tr-game-server/closeconnectionex.cpp8602242304#1567"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/closeconnectionex.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/closeconnectionex.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/connection.o /Users/markus/XCodeProjects/tr-game-server/connection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798873.011080
+e328798873.327669
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/connection.o
+x/Users/markus/XCodeProjects/tr-game-server/connection.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/markus/XCodeProjects/tr-game-server/connection.cpp:10:
+o/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':
+o/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary
+lSLF07#2@65"Compile /Users/markus/XCodeProjects/tr-game-server/connection.cpp328798873#328798873#0(321"In file included from /Users/markus/XCodeProjects/tr-game-server/connection.cpp:10:/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary1(22@32"Returning reference to temporary328798873#219#102#2(7@79"In file included from /Users/markus/XCodeProjects/tr-game-server/connection.cpp328798873#18446744073709551615#0#0(6@57"/Users/markus/XCodeProjects/tr-game-server/connection.cpp328646656#10#0#10#0#0"0(13@91"Returning reference to temporary in /Users/markus/XCodeProjects/tr-game-server/connection.h328798873#18446744073709551615#0#0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(0#0#57"/Users/markus/XCodeProjects/tr-game-server/connection.cpp8619725568#1553"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/connection.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/connection.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/crypto.o /Users/markus/XCodeProjects/tr-game-server/crypto.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798506.161001
+e328798506.549449
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/crypto.o
+x/Users/markus/XCodeProjects/tr-game-server/crypto.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/markus/XCodeProjects/tr-game-server/crypto.cpp: In constructor 'tr::crypto::CCryptMgr::CCryptMgr()':
+o/Users/markus/XCodeProjects/tr-game-server/crypto.cpp:28: warning: format '%d' expects type 'int', but argument 2 has type 'long unsigned int'
+o/Users/markus/XCodeProjects/tr-game-server/crypto.cpp:28: warning: format '%d' expects type 'int', but argument 3 has type 'long unsigned int'
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-game-server/crypto.cpp328798506#328798506#0(394"/Users/markus/XCodeProjects/tr-game-server/crypto.cpp: In constructor 'tr::crypto::CCryptMgr::CCryptMgr()':/Users/markus/XCodeProjects/tr-game-server/crypto.cpp:28: warning: format '%d' expects type 'int', but argument 2 has type 'long unsigned int'/Users/markus/XCodeProjects/tr-game-server/crypto.cpp:28: warning: format '%d' expects type 'int', but argument 3 has type 'long unsigned int'2(22@75"Format '%d' expects type 'int', but argument 2 has type 'long unsigned int'328798506#108#143#0(6@53"/Users/markus/XCodeProjects/tr-game-server/crypto.cpp328795884#28#0#28#0#56"format '*' expects type '*', but argument * has type '*'0(22@75"Format '%d' expects type 'int', but argument 3 has type 'long unsigned int'328798506#251#143#0(6@53"/Users/markus/XCodeProjects/tr-game-server/crypto.cpp328795884#28#0#28#0#56"format '*' expects type '*', but argument * has type '*'0(0#0#53"/Users/markus/XCodeProjects/tr-game-server/crypto.cpp8599529248#1545"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/crypto.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/crypto.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/log.o /Users/markus/XCodeProjects/tr-game-server/log.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740312.276002
+e328740312.567057
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/log.o
+x/Users/markus/XCodeProjects/tr-game-server/log.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/markus/XCodeProjects/tr-game-server/log.cpp328740312#328740312#0(0"0(0#0#50"/Users/markus/XCodeProjects/tr-game-server/log.cpp8618662368#1539"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/log.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/log.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/main.o /Users/markus/XCodeProjects/tr-game-server/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798872.527828
+e328798872.975773
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/main.o
+x/Users/markus/XCodeProjects/tr-game-server/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/markus/XCodeProjects/tr-game-server/server.h:19,
+o                 from /Users/markus/XCodeProjects/tr-game-server/main.cpp:6:
+o/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':
+o/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary
+o/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.h: At global scope:
+o/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.h:19: warning: 'Thread::ThreadsCount' defined but not used
+lSLF07#2@59"Compile /Users/markus/XCodeProjects/tr-game-server/main.cpp328798872#328798872#0(581"In file included from /Users/markus/XCodeProjects/tr-game-server/server.h:19,                 from /Users/markus/XCodeProjects/tr-game-server/main.cpp:6:/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.h: At global scope:/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.h:19: warning: 'Thread::ThreadsCount' defined but not used3(22@32"Returning reference to temporary328798872#290#102#3(7@73"In file included from /Users/markus/XCodeProjects/tr-game-server/main.cpp328798872#18446744073709551615#0#0(6@51"/Users/markus/XCodeProjects/tr-game-server/main.cpp328719505#6#0#6#0#0"0(7@73"In file included from /Users/markus/XCodeProjects/tr-game-server/server.h328798872#18446744073709551615#0#0(6@51"/Users/markus/XCodeProjects/tr-game-server/server.h328638681#19#0#19#0#0"0(13@91"Returning reference to temporary in /Users/markus/XCodeProjects/tr-game-server/connection.h328798872#18446744073709551615#0#0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(23@16"At global scope:328798872#392#75#0(6@56"/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.h328717635#0#0#0#0#0"0(22@43"'Thread::ThreadsCount' defined but not used328798872#467#114#0(6@56"/Users/markus/XCodeProjects/tr-game-server/ThreadUtils.h328717635#19#0#19#0#24"'*' defined but not used0(0#0#51"/Users/markus/XCodeProjects/tr-game-server/main.cpp8623630944#1541"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/main.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/md5.o /Users/markus/XCodeProjects/tr-game-server/md5.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740312.358317
+e328740312.710558
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/md5.o
+x/Users/markus/XCodeProjects/tr-game-server/md5.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/markus/XCodeProjects/tr-game-server/md5.cpp328740312#328740312#0(0"0(0#0#50"/Users/markus/XCodeProjects/tr-game-server/md5.cpp8627236832#1539"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/md5.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/md5.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/rsa.o /Users/markus/XCodeProjects/tr-game-server/rsa.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798506.550035
+e328798506.669601
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/rsa.o
+x/Users/markus/XCodeProjects/tr-game-server/rsa.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/markus/XCodeProjects/tr-game-server/rsa.cpp328798506#328798506#0(0"0(0#0#50"/Users/markus/XCodeProjects/tr-game-server/rsa.cpp8624890816#1539"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/rsa.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/rsa.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/selector.o /Users/markus/XCodeProjects/tr-game-server/selector.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740312.579711
+e328740312.884487
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/selector.o
+x/Users/markus/XCodeProjects/tr-game-server/selector.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/markus/XCodeProjects/tr-game-server/selector.cpp328740312#328740312#0(0"0(0#0#55"/Users/markus/XCodeProjects/tr-game-server/selector.cpp8626468768#1549"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/selector.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/selector.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/server.o /Users/markus/XCodeProjects/tr-game-server/server.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798872.530100
+e328798873.099055
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/server.o
+x/Users/markus/XCodeProjects/tr-game-server/server.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/markus/XCodeProjects/tr-game-server/server.h:19,
+o                 from /Users/markus/XCodeProjects/tr-game-server/server.cpp:13:
+o/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':
+o/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-game-server/server.cpp328798872#328798873#0(395"In file included from /Users/markus/XCodeProjects/tr-game-server/server.h:19,                 from /Users/markus/XCodeProjects/tr-game-server/server.cpp:13:/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary1(22@32"Returning reference to temporary328798872#293#102#3(7@75"In file included from /Users/markus/XCodeProjects/tr-game-server/server.cpp328798872#18446744073709551615#0#0(6@53"/Users/markus/XCodeProjects/tr-game-server/server.cpp328715437#13#0#13#0#0"0(7@73"In file included from /Users/markus/XCodeProjects/tr-game-server/server.h328798872#18446744073709551615#0#0(6@51"/Users/markus/XCodeProjects/tr-game-server/server.h328638681#19#0#19#0#0"0(13@91"Returning reference to temporary in /Users/markus/XCodeProjects/tr-game-server/connection.h328798872#18446744073709551615#0#0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(0#0#53"/Users/markus/XCodeProjects/tr-game-server/server.cpp8625344672#1545"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/server.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/server.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/serversocket.o /Users/markus/XCodeProjects/tr-game-server/serversocket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798872.816295
+e328798873.144178
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/serversocket.o
+x/Users/markus/XCodeProjects/tr-game-server/serversocket.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-game-server/serversocket.cpp328798872#328798873#0(0"0(0#0#59"/Users/markus/XCodeProjects/tr-game-server/serversocket.cpp8618352960#1557"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/serversocket.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/serversocket.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/socket.o /Users/markus/XCodeProjects/tr-game-server/socket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328798872.975847
+e328798873.302353
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/socket.o
+x/Users/markus/XCodeProjects/tr-game-server/socket.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/markus/XCodeProjects/tr-game-server/socket.cpp328798872#328798873#0(0"0(0#0#53"/Users/markus/XCodeProjects/tr-game-server/socket.cpp8621619744#1545"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/socket.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/socket.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trconnection.o /Users/markus/XCodeProjects/tr-game-server/trconnection.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328799210.506327
+e328799210.666154
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trconnection.o
+x/Users/markus/XCodeProjects/tr-game-server/trconnection.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/markus/XCodeProjects/tr-game-server/trconnection.cpp328799210#328799210#0(407"In file included from /Users/markus/XCodeProjects/tr-game-server/trconnection.h:13,                 from /Users/markus/XCodeProjects/tr-game-server/trconnection.cpp:14:/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary1(22@32"Returning reference to temporary328799210#305#102#3(7@81"In file included from /Users/markus/XCodeProjects/tr-game-server/trconnection.cpp328799210#18446744073709551615#0#0(6@59"/Users/markus/XCodeProjects/tr-game-server/trconnection.cpp328799210#14#0#14#0#0"0(7@79"In file included from /Users/markus/XCodeProjects/tr-game-server/trconnection.h328799210#18446744073709551615#0#0(6@57"/Users/markus/XCodeProjects/tr-game-server/trconnection.h328715469#13#0#13#0#0"0(13@91"Returning reference to temporary in /Users/markus/XCodeProjects/tr-game-server/connection.h328799210#18446744073709551615#0#0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(6@55"/Users/markus/XCodeProjects/tr-game-server/connection.h328712141#58#0#58#0#0"0(0#0#59"/Users/markus/XCodeProjects/tr-game-server/trconnection.cpp8619262848#1557"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/trconnection.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trconnection.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt.o /Users/markus/XCodeProjects/tr-game-server/trcrypt.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740312.341320
+e328740312.529610
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt.o
+x/Users/markus/XCodeProjects/tr-game-server/trcrypt.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/markus/XCodeProjects/tr-game-server/trcrypt.cpp328740312#328740312#0(0"0(0#0#54"/Users/markus/XCodeProjects/tr-game-server/trcrypt.cpp8627663712#1547"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/trcrypt.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt.o0#
+
+CCompileC build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt2.o /Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s328740561.374804
+e328740561.657436
+r1
+xCompileC
+xbuild/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt2.o
+x/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp: In member function 'void tr::crypto::CTRCrypt2::Copy_708C60(uint8_t*, uint8_t*)':
+o/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp:349: warning: unused variable 'result'
+o/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp:355: warning: unused variable 'v39'
+lSLF07#2@63"Compile /Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp328740561#328740561#0(326"/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp: In member function 'void tr::crypto::CTRCrypt2::Copy_708C60(uint8_t*, uint8_t*)':/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp:349: warning: unused variable 'result'/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp:355: warning: unused variable 'v39'2(22@24"Unused variable 'result'328740561#139#95#0(6@55"/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp328738709#349#0#349#0#19"unused variable '*'0(22@21"Unused variable 'v39'328740561#234#92#0(6@55"/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp328738709#355#0#355#0#19"unused variable '*'0(0#0#55"/Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp8625050112#1549"    cd /Users/markus/XCodeProjects/tr-game-server    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-generated-files.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-own-target-headers.hmap -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-all-target-headers.hmap -iquote /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/tr-game-server-project-headers.hmap -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -I/Users/markus/XCodeProjects/tr-game-server/build/Debug/include -I/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl -I/usr/local/mysql/include -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources/x86_64 -I/Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/DerivedSources -c /Users/markus/XCodeProjects/tr-game-server/trcrypt2.cpp -o /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/trcrypt2.o0#
+
+CLd /Users/markus/XCodeProjects/tr-game-server/build/Debug/tr-game-server normal x86_64
+s328799210.667295
+e328799210.695795
+r1
+xLd
+x/Users/markus/XCodeProjects/tr-game-server/build/Debug/tr-game-server
+xnormal
+xx86_64
+lSLF07#2@74"Link /Users/markus/XCodeProjects/tr-game-server/build/Debug/tr-game-server328799210#328799210#0(0"0(0#0#0"8614304672#647"    cd /Users/markus/XCodeProjects/tr-game-server    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/markus/XCodeProjects/tr-game-server/build/Debug -L/Developer/SDKs/MacOSX10.6.sdk/usr/lib -L/usr/local/mysql/lib -F/Users/markus/XCodeProjects/tr-game-server/build/Debug -filelist /Users/markus/XCodeProjects/tr-game-server/build/tr-game-server.build/Debug/tr-game-server.build/Objects-normal/x86_64/tr-game-server.LinkFileList -mmacosx-version-min=10.6 -lssl -lcrypto -lz -lm -lmysqlclient -o /Users/markus/XCodeProjects/tr-game-server/build/Debug/tr-game-server0#
+

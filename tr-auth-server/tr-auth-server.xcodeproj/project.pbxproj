@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		282D3E791394FDCE00EE60F6 /* crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 282D3E781394FDCE00EE60F6 /* crypto.cpp */; };
+		282D3ECC1395046B00EE60F6 /* blowfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 282D3ECB1395046B00EE60F6 /* blowfish.cpp */; };
+		282D3ECF1395047600EE60F6 /* trcrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 282D3ECE1395047600EE60F6 /* trcrypt.cpp */; };
+		282D3F6E13950C1700EE60F6 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 282D3F6D13950C1700EE60F6 /* md5.cpp */; };
+		2846F75F1396A5F100CBCF9C /* CryptManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2846F75E1396A5F100CBCF9C /* CryptManager.cpp */; };
+		2870DAA11393F72500AF7CF6 /* connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2870DAA01393F72500AF7CF6 /* connection.cpp */; };
+		2870DB031393FD7600AF7CF6 /* trconnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2870DB021393FD7600AF7CF6 /* trconnection.cpp */; };
+		2870DCE51394266700AF7CF6 /* closeconnectionex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2870DCE41394266700AF7CF6 /* closeconnectionex.cpp */; };
+		2879FB091396CBF900FC9C04 /* DBMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2879FB081396CBF900FC9C04 /* DBMgr.cpp */; };
+		2893928A1397C3FA0052AC2C /* GSMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 289392891397C3FA0052AC2C /* GSMgr.cpp */; };
+		289392B01397C8860052AC2C /* SessionMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 289392AF1397C8860052AC2C /* SessionMgr.cpp */; };
+		289393251397D47E0052AC2C /* ThreadUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 289393241397D47E0052AC2C /* ThreadUtils.cpp */; };
+		28D964D41392DC1E0088279D /* server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28D964D31392DC1E0088279D /* server.cpp */; };
+		28D964D81392DD2A0088279D /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28D964D71392DD2A0088279D /* log.cpp */; };
+		28D965971392EE7A0088279D /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28D965961392EE7A0088279D /* socket.cpp */; };
+		28D9659A1392EE810088279D /* serversocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28D965991392EE810088279D /* serversocket.cpp */; };
+		28D966281392F71D0088279D /* PacketBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28D966271392F71D0088279D /* PacketBuffer.cpp */; };
+		28D9671C139305A80088279D /* selector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28D9671B139305A80088279D /* selector.cpp */; };
+		28D969E11393304A0088279D /* chatclient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28D969E01393304A0088279D /* chatclient.cpp */; };
+		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		8DD76F6A0486A84900D96B5E /* tr-auth-server.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* tr-auth-server.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* tr-auth-server.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		282D3E771394FDCE00EE60F6 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		282D3E781394FDCE00EE60F6 /* crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crypto.cpp; sourceTree = "<group>"; };
+		282D3ECA1395046B00EE60F6 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		282D3ECB1395046B00EE60F6 /* blowfish.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = blowfish.cpp; sourceTree = "<group>"; };
+		282D3ECD1395047600EE60F6 /* trcrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trcrypt.h; sourceTree = "<group>"; };
+		282D3ECE1395047600EE60F6 /* trcrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trcrypt.cpp; sourceTree = "<group>"; };
+		282D3ED0139504E200EE60F6 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		282D3F6C13950C1700EE60F6 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		282D3F6D13950C1700EE60F6 /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		282D40EA13951F3000EE60F6 /* authcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authcodes.h; sourceTree = "<group>"; };
+		282D40F313951FE400EE60F6 /* SMSG_AuthError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSG_AuthError.h; sourceTree = "<group>"; };
+		282D43F6139554B500EE60F6 /* SMSG_AuthErrorAccountBlocked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSG_AuthErrorAccountBlocked.h; sourceTree = "<group>"; };
+		2846F75D1396A5F100CBCF9C /* CryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptManager.h; sourceTree = "<group>"; };
+		2846F75E1396A5F100CBCF9C /* CryptManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CryptManager.cpp; sourceTree = "<group>"; };
+		2846F7DE1396B29900CBCF9C /* clientpacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clientpacket.h; sourceTree = "<group>"; };
+		2846F7DF1396B30C00CBCF9C /* CMSG_AuthLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSG_AuthLogin.h; sourceTree = "<group>"; };
+		2846F7E21396B44200CBCF9C /* SMSG_AuthOk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSG_AuthOk.h; sourceTree = "<group>"; };
+		2846F8151396B70B00CBCF9C /* SMSG_AuthServerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSG_AuthServerList.h; sourceTree = "<group>"; };
+		2846F8271396B9DA00CBCF9C /* CMSG_AuthSelectServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSG_AuthSelectServer.h; sourceTree = "<group>"; };
+		2870DA9F1393F72500AF7CF6 /* connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = connection.h; sourceTree = "<group>"; };
+		2870DAA01393F72500AF7CF6 /* connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = connection.cpp; sourceTree = "<group>"; };
+		2870DACA1393FB0D00AF7CF6 /* basepacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basepacket.h; sourceTree = "<group>"; };
+		2870DACF1393FBA700AF7CF6 /* SMSG_HELLO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSG_HELLO.h; sourceTree = "<group>"; };
+		2870DAD21393FBE300AF7CF6 /* serverpacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serverpacket.h; sourceTree = "<group>"; };
+		2870DB011393FD7600AF7CF6 /* trconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trconnection.h; sourceTree = "<group>"; };
+		2870DB021393FD7600AF7CF6 /* trconnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trconnection.cpp; sourceTree = "<group>"; };
+		2870DCE31394266700AF7CF6 /* closeconnectionex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = closeconnectionex.h; sourceTree = "<group>"; };
+		2870DCE41394266700AF7CF6 /* closeconnectionex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = closeconnectionex.cpp; sourceTree = "<group>"; };
+		2879FB071396CBF900FC9C04 /* DBMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMgr.h; sourceTree = "<group>"; };
+		2879FB081396CBF900FC9C04 /* DBMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DBMgr.cpp; sourceTree = "<group>"; };
+		289392881397C3FA0052AC2C /* GSMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMgr.h; sourceTree = "<group>"; };
+		289392891397C3FA0052AC2C /* GSMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GSMgr.cpp; sourceTree = "<group>"; };
+		289392A61397C6A20052AC2C /* SMSG_GSHandoff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSG_GSHandoff.h; sourceTree = "<group>"; };
+		289392AE1397C8860052AC2C /* SessionMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionMgr.h; sourceTree = "<group>"; };
+		289392AF1397C8860052AC2C /* SessionMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SessionMgr.cpp; sourceTree = "<group>"; };
+		289393231397D47E0052AC2C /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUtils.h; sourceTree = "<group>"; };
+		289393241397D47E0052AC2C /* ThreadUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThreadUtils.cpp; sourceTree = "<group>"; };
+		28D964D21392DC1E0088279D /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server.h; sourceTree = "<group>"; };
+		28D964D31392DC1E0088279D /* server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = server.cpp; sourceTree = "<group>"; };
+		28D964D61392DD2A0088279D /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		28D964D71392DD2A0088279D /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
+		28D965951392EE7A0088279D /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
+		28D965961392EE7A0088279D /* socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socket.cpp; sourceTree = "<group>"; };
+		28D965981392EE810088279D /* serversocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serversocket.h; sourceTree = "<group>"; };
+		28D965991392EE810088279D /* serversocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = serversocket.cpp; sourceTree = "<group>"; };
+		28D966261392F71D0088279D /* PacketBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketBuffer.h; sourceTree = "<group>"; };
+		28D966271392F71D0088279D /* PacketBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketBuffer.cpp; sourceTree = "<group>"; };
+		28D9671A139305A80088279D /* selector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selector.h; sourceTree = "<group>"; };
+		28D9671B139305A80088279D /* selector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = selector.cpp; sourceTree = "<group>"; };
+		28D969DF1393304A0088279D /* chatclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatclient.h; sourceTree = "<group>"; };
+		28D969E01393304A0088279D /* chatclient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chatclient.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* tr-auth-server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "tr-auth-server"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* tr-auth-server.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "tr-auth-server.1"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* tr-auth-server */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = "tr-auth-server";
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				282D3E751394FDBA00EE60F6 /* crypto */,
+				28D964D51392DD230088279D /* util */,
+				282874CF132D7FF2005A5E28 /* network */,
+				08FB7796FE84155DC02AAC07 /* main.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* tr-auth-server */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		282874CF132D7FF2005A5E28 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				28D969DC13932BAF0088279D /* packet */,
+				28D964D21392DC1E0088279D /* server.h */,
+				28D964D31392DC1E0088279D /* server.cpp */,
+				28D965951392EE7A0088279D /* socket.h */,
+				28D965961392EE7A0088279D /* socket.cpp */,
+				28D965981392EE810088279D /* serversocket.h */,
+				28D965991392EE810088279D /* serversocket.cpp */,
+				28D9671A139305A80088279D /* selector.h */,
+				28D9671B139305A80088279D /* selector.cpp */,
+				28D969DF1393304A0088279D /* chatclient.h */,
+				28D969E01393304A0088279D /* chatclient.cpp */,
+				2870DA9F1393F72500AF7CF6 /* connection.h */,
+				2870DAA01393F72500AF7CF6 /* connection.cpp */,
+				2870DB011393FD7600AF7CF6 /* trconnection.h */,
+				2870DB021393FD7600AF7CF6 /* trconnection.cpp */,
+				2870DCE31394266700AF7CF6 /* closeconnectionex.h */,
+				2870DCE41394266700AF7CF6 /* closeconnectionex.cpp */,
+				289392881397C3FA0052AC2C /* GSMgr.h */,
+				289392891397C3FA0052AC2C /* GSMgr.cpp */,
+				289392AE1397C8860052AC2C /* SessionMgr.h */,
+				289392AF1397C8860052AC2C /* SessionMgr.cpp */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		282D3E751394FDBA00EE60F6 /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				282D3E771394FDCE00EE60F6 /* crypto.h */,
+				282D3E781394FDCE00EE60F6 /* crypto.cpp */,
+				282D3ECA1395046B00EE60F6 /* blowfish.h */,
+				282D3ECB1395046B00EE60F6 /* blowfish.cpp */,
+				282D3ECD1395047600EE60F6 /* trcrypt.h */,
+				282D3ECE1395047600EE60F6 /* trcrypt.cpp */,
+				282D3F6C13950C1700EE60F6 /* md5.h */,
+				282D3F6D13950C1700EE60F6 /* md5.cpp */,
+				2846F75D1396A5F100CBCF9C /* CryptManager.h */,
+				2846F75E1396A5F100CBCF9C /* CryptManager.cpp */,
+			);
+			name = crypto;
+			sourceTree = "<group>";
+		};
+		2846F7DB1396B27400CBCF9C /* server */ = {
+			isa = PBXGroup;
+			children = (
+				2870DACF1393FBA700AF7CF6 /* SMSG_HELLO.h */,
+				282D40F313951FE400EE60F6 /* SMSG_AuthError.h */,
+				282D43F6139554B500EE60F6 /* SMSG_AuthErrorAccountBlocked.h */,
+				2846F7E21396B44200CBCF9C /* SMSG_AuthOk.h */,
+				2846F8151396B70B00CBCF9C /* SMSG_AuthServerList.h */,
+				289392A61397C6A20052AC2C /* SMSG_GSHandoff.h */,
+			);
+			name = server;
+			sourceTree = "<group>";
+		};
+		2846F7DD1396B27C00CBCF9C /* client */ = {
+			isa = PBXGroup;
+			children = (
+				2846F7DF1396B30C00CBCF9C /* CMSG_AuthLogin.h */,
+				2846F8271396B9DA00CBCF9C /* CMSG_AuthSelectServer.h */,
+			);
+			name = client;
+			sourceTree = "<group>";
+		};
+		28D964D51392DD230088279D /* util */ = {
+			isa = PBXGroup;
+			children = (
+				28D964D61392DD2A0088279D /* log.h */,
+				28D964D71392DD2A0088279D /* log.cpp */,
+				282D3ED0139504E200EE60F6 /* types.h */,
+				2879FB071396CBF900FC9C04 /* DBMgr.h */,
+				2879FB081396CBF900FC9C04 /* DBMgr.cpp */,
+				289393231397D47E0052AC2C /* ThreadUtils.h */,
+				289393241397D47E0052AC2C /* ThreadUtils.cpp */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		28D969DC13932BAF0088279D /* packet */ = {
+			isa = PBXGroup;
+			children = (
+				2846F7DD1396B27C00CBCF9C /* client */,
+				2846F7DB1396B27400CBCF9C /* server */,
+				28D966261392F71D0088279D /* PacketBuffer.h */,
+				28D966271392F71D0088279D /* PacketBuffer.cpp */,
+				2870DACA1393FB0D00AF7CF6 /* basepacket.h */,
+				2870DAD21393FBE300AF7CF6 /* serverpacket.h */,
+				282D40EA13951F3000EE60F6 /* authcodes.h */,
+				2846F7DE1396B29900CBCF9C /* clientpacket.h */,
+			);
+			name = packet;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* tr-auth-server.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* tr-auth-server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "tr-auth-server" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tr-auth-server";
+			productInstallPath = "$(HOME)/bin";
+			productName = "tr-auth-server";
+			productReference = 8DD76F6C0486A84900D96B5E /* tr-auth-server */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = InfiniteRasa;
+			};
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "tr-auth-server" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* tr-auth-server */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* tr-auth-server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
+				28D964D41392DC1E0088279D /* server.cpp in Sources */,
+				28D964D81392DD2A0088279D /* log.cpp in Sources */,
+				28D965971392EE7A0088279D /* socket.cpp in Sources */,
+				28D9659A1392EE810088279D /* serversocket.cpp in Sources */,
+				28D966281392F71D0088279D /* PacketBuffer.cpp in Sources */,
+				28D9671C139305A80088279D /* selector.cpp in Sources */,
+				28D969E11393304A0088279D /* chatclient.cpp in Sources */,
+				2870DAA11393F72500AF7CF6 /* connection.cpp in Sources */,
+				2870DB031393FD7600AF7CF6 /* trconnection.cpp in Sources */,
+				2870DCE51394266700AF7CF6 /* closeconnectionex.cpp in Sources */,
+				282D3E791394FDCE00EE60F6 /* crypto.cpp in Sources */,
+				282D3ECC1395046B00EE60F6 /* blowfish.cpp in Sources */,
+				282D3ECF1395047600EE60F6 /* trcrypt.cpp in Sources */,
+				282D3F6E13950C1700EE60F6 /* md5.cpp in Sources */,
+				2846F75F1396A5F100CBCF9C /* CryptManager.cpp in Sources */,
+				2879FB091396CBF900FC9C04 /* DBMgr.cpp in Sources */,
+				2893928A1397C3FA0052AC2C /* GSMgr.cpp in Sources */,
+				289392B01397C8860052AC2C /* SessionMgr.cpp in Sources */,
+				289393251397D47E0052AC2C /* ThreadUtils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "tr-auth-server";
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "tr-auth-server";
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/mysql/include/;
+				LIBRARY_SEARCH_PATHS = /usr/local/mysql/lib/;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lm",
+					"-lmysqlclient",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/mysql/include/;
+				LIBRARY_SEARCH_PATHS = /usr/local/mysql/lib/;
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lm",
+					"-lmysqlclient",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "tr-auth-server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "tr-auth-server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

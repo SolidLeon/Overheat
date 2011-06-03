@@ -1,0 +1,6 @@
+In file included from /Users/markus/XCodeProjects/tr-game-server/trconnection.h:13,
+                 from /Users/markus/XCodeProjects/tr-game-server/trconnection.cpp:14:
+/Users/markus/XCodeProjects/tr-game-server/connection.h: In member function 'const std::string& tr::net::CConnection::get_ip() const':
+/Users/markus/XCodeProjects/tr-game-server/connection.h:58: warning: returning reference to temporary
+/Users/markus/XCodeProjects/tr-game-server/trconnection.cpp: In member function 'virtual void tr::net::TRConnection::on_accept()':
+/Users/markus/XCodeProjects/tr-game-server/trconnection.cpp:55: error: invalid suffix on integer constant

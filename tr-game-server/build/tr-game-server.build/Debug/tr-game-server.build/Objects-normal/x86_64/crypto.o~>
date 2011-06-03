@@ -1,0 +1,14 @@
+In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl/asn1.h:74,
+                 from /Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl/rsa.h:62,
+                 from /Users/markus/XCodeProjects/tr-game-server/crypto.h:19,
+                 from /Users/markus/XCodeProjects/tr-game-server/crypto.cpp:10:
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl/bn.h:303: error: expected unqualified-id before numeric constant
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/openssl/bn.h:320: error: expected unqualified-id before numeric constant
+In file included from /Users/markus/XCodeProjects/tr-game-server/crypto.cpp:10:
+/Users/markus/XCodeProjects/tr-game-server/crypto.h:33: error: 'CRSA' does not name a type
+/Users/markus/XCodeProjects/tr-game-server/crypto.h:44: error: ISO C++ forbids declaration of 'CRSA' with no type
+/Users/markus/XCodeProjects/tr-game-server/crypto.h:44: error: expected ';' before '&' token
+/Users/markus/XCodeProjects/tr-game-server/crypto.cpp: In constructor 'tr::crypto::CCryptMgr::CCryptMgr()':
+/Users/markus/XCodeProjects/tr-game-server/crypto.cpp:28: warning: format '%d' expects type 'int', but argument 2 has type 'long unsigned int'
+/Users/markus/XCodeProjects/tr-game-server/crypto.cpp:28: warning: format '%d' expects type 'int', but argument 3 has type 'long unsigned int'
+/Users/markus/XCodeProjects/tr-game-server/crypto.cpp:32: error: 'class tr::crypto::CCryptMgr' has no member named '_rsa'
