@@ -19,6 +19,17 @@ static tr::util::CLog log = tr::util::CLog::get_logger( "TRConnection" );
 
 void TRConnection::on_accept()
 {
+    struct CMSG_ITD_FAKE1RESPONSE {
+        uint32_t packet_len;
+        uint32_t blen;
+        uint8_t client_pubkey[6];
+    } p1;
+    struct CMSG_ITD_FAKE2RESPONSE {
+        uint32_t packet_len;
+        uint8_t op;
+        uint32_t login_id1;
+        uint32_t login_id2;
+    }p2;
 	//SMSG_ITD_FAKE1
 	CPacketBuffer packet(0x1B);
 	packet.byte_order(CPacketBuffer::BO_LITTLE_ENDIAN);
@@ -35,24 +46,39 @@ void TRConnection::on_accept()
 	//CMSG_ITD_FAKE1RESPONSE
 	try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
 	m_in.rewind();
-	uint32_t packet_len;
-	uint32_t blen;
-	uint8_t client_pubkey[6];
-	
-	packet_len = m_in.getUInt();
+    
+	p1.packet_len = m_in.getUInt();
 	if( packet_len != 0x0C )
 	{
-		::log.info("CMSG_ITD_FAKE1RESPONSE: Wront packet len!");
+		::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
 		close();
 		return;
 	}
-	blen = m_in.getUInt();
-	memcpy(m_in.array() + 8,client_pubkey, 6);
+	p1.blen = m_in.getUInt();
+	memcpy(m_in.array() + 8,p1.client_pubkey, 6);
 	
 	//SMSG_ITD_FAKE2
 	packet.clear();
 	packet.putUInt(0x06);
 	packet.put(0x45).put(0x4e).put(0x43).put(0x20).put(0x4f).put(0x4b); //ENC_OK
+    
+    //CMSG_ITD_FAKE2RESPONSE
+	try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
+	m_in.rewind();
+    
+	p2.packet_len = m_in.getUInt();
+	if( packet_len != 0x09 )
+	{
+		::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+		close();
+		return;
+	}
+    p2.op = m_in.get();
+    p2.login_id1 = m_in.getUInt();
+    p2.login_id2 = m_in.getUInt();
+    
+    //TODO: finish implementing protocol
+    //now From Authentication Server[SMSG_SERVERRESPONSE]
 }
 
 void TRConnection::on_read()
