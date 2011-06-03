@@ -3,7 +3,7 @@
  *  tr-game-server
  *
  *  Created by Markus Mannel on 02.06.11.
- *  Copyright 2011 HTL. All rights reserved.
+ *  Copyright 2011 Overheat. All rights reserved.
  *
  */
 

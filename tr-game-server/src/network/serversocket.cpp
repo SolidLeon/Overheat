@@ -3,7 +3,7 @@
  *  tr-auth-server
  *
  *  Created by Markus Mannel on 29.05.11.
- *  Copyright 2011 HTL. All rights reserved.
+ *  Copyright 2011 Overheat. All rights reserved.
  *
  */
 
