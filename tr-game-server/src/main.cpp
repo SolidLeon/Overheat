@@ -24,9 +24,9 @@ int main (int argc, char * const argv[])
 {		
 	
 	printf(" ==============================================================================\r\n");
-	printf("                                 Infinite Rasa                                 \r\n");
+	printf("                                    Overheat                                   \r\n");
 	printf("                                  Game Server                              \r\n\r\n");
-	printf("  Version 0.4                                         http://infiniterasa.com/ \r\n");
+	printf("  Version 0.4                                             http://overheat.com/ \r\n");
 	printf(" ==============================================================================\r\n");
 
 	printf("Load Crypto...\n");
