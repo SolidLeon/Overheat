@@ -46,6 +46,7 @@ void CServerSocket::init()
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	servaddr.sin_port = htons(port);
+    printf("Use Port %d\n", port);
 	
 	/* bind */
 	rc = ::bind( socket, (struct sockaddr *) &servaddr, sizeof(servaddr) );

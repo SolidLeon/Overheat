@@ -18,13 +18,14 @@ using tr::util::CLog;
 
 static CLog log = CLog::get_logger( "Server" );
 
-CServer::CServer( int port )
-: server( port )
+CServer::CServer( CGameServer &gs )
+: game_server(gs), server(gs.get_port())
 {
 }
 
 void CServer::start()
 {
+    printf("Start Game Server %d\n", game_server.get_port());
 	server._register( selector );
 	main_loop();
 }
@@ -76,8 +77,9 @@ void CServer::main_loop()
 				//TODO:
 				// call the on_read method of the appropiate, Connection class				
 				//on_read(clients[i]->get_socket(), pbRead);
-				
-				::log.info(("Read from client " + clients[i]->get_ip()).c_str());
+                char sbuf[30];
+                sprintf(sbuf, "Read from client %s\n", clients[i]->get_ip().c_str());
+				::log.info(sbuf);
 				
 				clients[i]->on_read();
 				

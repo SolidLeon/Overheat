@@ -34,8 +34,14 @@ int main (int argc, char * const argv[])
 	tr::crypto::CCryptMgr::instance();
 	
 	printf("Load Database Driver...\n");
-	tr::util::DBMgr::create( "127.0.0.1", 8889, "root", "root", "tabuladb" );
+    try {
+        tr::util::DBMgr::create( "127.0.0.1", 8889, "root", "root", "tabuladb" );
+    } catch( const char* ex ) {
+        cerr << ex << endl;
+        return 1;
+    }
 	printf("Database loaded OK\n");
+    
 	tr::net::CServer server(2106);
     
 	//Delete sessions and server

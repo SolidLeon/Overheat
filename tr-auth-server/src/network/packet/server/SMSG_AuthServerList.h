@@ -13,10 +13,12 @@
 #include "serverpacket.h"
 #include "authcodes.h"
 #include "DBMgr.h"
+#include <arpa/inet.h>  x
 
 using namespace tr::net;
 using tr::net::packet::CServerPacket;
 using tr::util::DBMgr;
+
 class CAuthServer
 {
 public:
@@ -58,9 +60,11 @@ public:
 		
 		while( (row = DBMgr::get_instance().fetch_row(res)) )
 		{
+            uint32_t ip;
+            ip = inet_addr(row[1]);
 			CAuthServer s = {
 				(uint8_t)atoi(row[0]), //server_id
-				strtoul(row[1], NULL,10), //host 
+				ip, //host 
 				atoi(row[2]), //port
 				(uint8_t)atoi(row[3]), //age_limit
 				(uint8_t)atoi(row[4]), //pk_flag

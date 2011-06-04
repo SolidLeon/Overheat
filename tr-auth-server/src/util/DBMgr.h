@@ -10,6 +10,10 @@
 #ifndef _TR_DBMGR_H_
 #define _TR_DBMGR_H_
 
+#ifndef _WIN32
+#define Sleep(x) sleep(x/1000) 
+#endif
+
 #include <mysql.h>
 #include <string>
 

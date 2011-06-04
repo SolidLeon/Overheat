@@ -31,7 +31,7 @@ DBMgr::DBMgr(const char *dbHost, unsigned int dbPort, const char *dbUser, const 
 	if( this->dbHandle == NULL )
 	{
 		printf("MySQL: %s\n", mysql_error(dbHandleErr));
-		//sleep(10*1000);
+		Sleep(10*1000);
 	}
 }
 

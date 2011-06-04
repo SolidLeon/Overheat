@@ -38,7 +38,7 @@ namespace tr
 			
 			bool query(const char *sql);
 			MYSQL_RES* store_result();
-			unsigned long long num_rows(MYSQL_RES* result);
+			uint64_t num_rows(MYSQL_RES* result);
 			MYSQL_ROW fetch_row(MYSQL_RES* result);
 			void free_result(MYSQL_RES* result);
 			

@@ -186,6 +186,7 @@ void TRConnection::on_read()
 				s += ip;
 				s += ">";
 				::log.info(s.c_str());
+                close();
 			}
 		}
 		break;

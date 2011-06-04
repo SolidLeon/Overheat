@@ -76,8 +76,10 @@ void CServer::main_loop()
 				//TODO:
 				// call the on_read method of the appropiate, Connection class				
 				//on_read(clients[i]->get_socket(), pbRead);
-				
-				::log.info(("Read from client " + clients[i]->get_ip()).c_str());
+				string s;
+                s = "Read from client ";
+                s += clients[i]->get_ip();
+				::log.info(s.c_str());
 				
 				clients[i]->on_read();
 				

@@ -30,9 +30,9 @@ void TRConnection::on_accept()
         uint32_t login_id1;
         uint32_t login_id2;
     }p2;
-	//SMSG_ITD_FAKE1
-	CPacketBuffer packet(0x1B);
+	CPacketBuffer packet(8192);
 	packet.byte_order(CPacketBuffer::BO_LITTLE_ENDIAN);
+	//SMSG_ITD_FAKE1
 	packet.clear();
 	packet.putUInt(0x1b);
 	packet.putUInt(0x08);
@@ -46,11 +46,11 @@ void TRConnection::on_accept()
 	//CMSG_ITD_FAKE1RESPONSE
 	try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
 	m_in.rewind();
-    
 	p1.packet_len = m_in.getUInt();
-	if( packet_len != 0x0C )
+	if( m_in.array()[0] != 0x0C )
 	{
 		::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+        printf("Data: %X\n", *(uint32_t*)&p1);
 		close();
 		return;
 	}
@@ -61,24 +61,47 @@ void TRConnection::on_accept()
 	packet.clear();
 	packet.putUInt(0x06);
 	packet.put(0x45).put(0x4e).put(0x43).put(0x20).put(0x4f).put(0x4b); //ENC_OK
+	packet.flip();
+	CConnection::send(packet);
     
     //CMSG_ITD_FAKE2RESPONSE
 	try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
 	m_in.rewind();
     
 	p2.packet_len = m_in.getUInt();
-	if( packet_len != 0x09 )
+	if( m_in.array()[0] != 0x09 )
 	{
 		::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
 		close();
 		return;
 	}
+    m_in.debug_out();
     p2.op = m_in.get();
     p2.login_id1 = m_in.getUInt();
     p2.login_id2 = m_in.getUInt();
+    session.update(p2.login_id1, p2.login_id2);
+    printf("SESSION UPDATE: sessionID1=%d, sessionID2=%d\n", session.session1(), session.session2());
     
-    //TODO: finish implementing protocol
-    //now From Authentication Server[SMSG_SERVERRESPONSE]
+    //SMSG_ITD_FAKE3
+    packet.clear();
+    packet.putUInt(0x09);
+    packet.put(0x0d);
+    packet.putUInt(0x00);
+    packet.putUInt(0x50);
+	packet.flip();
+	CConnection::send(packet);
+    
+    //SMSG_ITD_FORWARD
+    packet.clear();
+    packet.putUInt(0x11);
+    packet.put(0x0e);
+    packet.putUInt(0x89f86bd8);
+    packet.putUInt(0x00001f41);
+    packet.putUInt(session.session1());
+    packet.putUInt(session.session2());
+    packet.flip();
+    CConnection::send(packet);
+    
 }
 
 void TRConnection::on_read()
@@ -115,130 +138,7 @@ void TRConnection::on_read()
 	
 	switch ( opcode )
 	{
-	case AuthCodes::AuthLogin:
-		
-		unsigned char data[30];
-		memcpy((void*)data, (void*)(m_in.array()+3), 30);
-		//Special decryption just for user data
-		CCryptMgr::instance().get_tr_crypt().TRDecrypt((uint8_t*) data, 30);
-		
-		char acc[14];
-		char pw[16];
-		memcpy((void*)acc, (void*)data, 14);
-		memcpy((void*)pw, (void*)(data+14), 16);
-		
-		{
-			string s = "LOGON CHALLENGE: Username = <";
-			s += acc;
-			s += "> IP = <";
-			s += ip;
-			s += ">";
-			::log.info( s.c_str());
-		}
-		
-		//TODO: Check Login against Database
-		{
-			int rc = tr::util::DBMgr::get_instance().validate_player( acc, 
-																	 CCryptMgr::instance().gen_md5(pw, strlen(pw)).c_str(), 
-			&UID );
-			
-			if( rc == 0 )
-			{
-				
-				string s = "LOGON CHALLENGE succeed for ";
-				s += acc;
-				s += ", ";
-				s += ip;
-				::log.info( s.c_str());
-				
-				send_packet = new SMSG_AuthOk();
-				send_packet->write(*this);
-				send( );
-				account_name = std::string( acc );
-			}
-			else if( rc == -1 ) // ACC Information Wrong
-			{
-				string s = "LOGON CHALLENGE failed for ";
-				s += acc;
-				s += ", ";
-				s += ip;
-				//s += ", ";
-				//s += no_tries;
-				//s += " times";
-				::log.info( s.c_str());
-				
-				send_packet = new SMSG_AuthError(AuthError::INVALID_PASSWORD);
-				send_packet->write(*this);
-				send( );
-				close();
-			}
-			else if( rc == 1 ) //ACC BLOCKED
-			{
-				string s = "LOGON CHALLENGE failed for ";
-				s += acc;
-				s += ", ";
-				s += ip;
-				//s += ", ";
-				//s += no_tries;
-				//s += " times";
-				::log.info( s.c_str());
-				
-				send_packet = new SMSG_AuthErrorAccountBlocked(0x02);
-				send_packet->write(*this);
-				send( );
-				close();
-				
-			} 
-			else if( rc == 2 ) //ACC Already Logged in
-			{
-				string s = "LOGON CHALLENGE failed for ";
-				s += acc;
-				s += ", ";
-				s += ip;
-				//s += ", ";
-				//s += no_tries;
-				//s += " times";
-				::log.info( s.c_str());
-				
-				send_packet = new SMSG_AuthError(AuthError::INVALID_PASSWORD);
-				send_packet->write(*this);
-				send( );
-				close();
-				
-			}
-		}
-		break;
-		
-	case AuthCodes::AuthRequestServerList:
-		send_packet = new SMSG_AuthServerList();
-		send_packet->write(*this);
-		send();
-		break;
-		
-	case AuthCodes::AuthSelectServer:
-		{
-			CMSG_AuthSelectServer p;
-			p.read( m_in ); 
-			uint8_t serverID = p.get_server_id();
-			//Handoff to GameServer
-			if( serverID > 0 )
-			{
-				uint64_t sessionID = CSessionMgr::instance().generate_session( account_name.c_str(), UID );
-				send_packet = new SMSG_AuthGSHandoff( sessionID, serverID );
-				send_packet->write( *this );
-				send();
-				std::string s;
-				s = "Handoff client <";
-				s += ip;
-				s += ">";
-				::log.info(s.c_str());
-			}
-		}
-		break;
 	default:
-		send_packet = new SMSG_AuthError(AuthError::SYSTEM_ERROR);
-		send_packet->write(*this);
-		send();
 		close();
 		break;
 	}

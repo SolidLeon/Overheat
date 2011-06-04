@@ -28,7 +28,7 @@ public:
 	void write_impl( CPacketBuffer& buf )
 	{
 		buf.put( get_opcode() );
-		buf.putUInt( (sessionID & 0xFFFFFFFFFF) );
+		buf.putUInt( (sessionID & 0xFFFFFFFF) );
 		buf.putUInt( (sessionID >> 32) );
 		buf.put( serverID );
 	}

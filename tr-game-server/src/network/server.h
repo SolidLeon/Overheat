@@ -19,6 +19,10 @@
 #include "connection.h"
 #include "trconnection.h"
 
+#include "GameServer.h"
+
+#include "types.h"
+
 namespace tr 
 {
 	namespace net 
@@ -36,6 +40,8 @@ namespace tr
 			CSelector selector;
 			//CSocket clients[MAX_CLIENTS];// <- These must be replaces by the appropitae connection implementation, by the factory, or with templates
 			std::vector<CConnection*> clients;
+            
+            CGameServer game_server;
 			//main loop
 			void main_loop();
 			
@@ -44,7 +50,7 @@ namespace tr
 			void on_read( CSocket&, packet::CPacketBuffer& );
 
 		public:
-			CServer( int );
+			CServer( CGameServer& );
 			void start();
 			
 			void send( CConnection&, CPacketBuffer& );

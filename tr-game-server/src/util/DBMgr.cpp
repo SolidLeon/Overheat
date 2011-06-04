@@ -69,7 +69,7 @@ MYSQL_RES* DBMgr::store_result()
 	return mysql_store_result(this->dbHandle);
 }
 
-unsigned long long DBMgr::num_rows(MYSQL_RES* result)
+uint64_t DBMgr::num_rows(MYSQL_RES* result)
 {
 	return mysql_num_rows(result);
 }

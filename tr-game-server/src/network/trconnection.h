@@ -18,20 +18,14 @@
 #include "crypto.h"
 #include "authcodes.h"
 #include "DBMgr.h"
-#include "SessionMgr.h"
+#include "Session.h"
+#include "serverpacket.h"
 
 #include <string>
 
-#include "SMSG_HELLO.h"
-#include "SMSG_AuthError.h"
-#include "SMSG_AuthErrorAccountBlocked.h"
-#include "SMSG_AuthOk.h"
-#include "SMSG_AuthServerList.h"
-#include "SMSG_GSHandoff.h"
-
-#include "CMSG_AuthSelectServer.h"
 
 using tr::crypto::CCryptMgr;
+using tr::net::packet::CServerPacket;
 
 namespace tr
 {
@@ -48,10 +42,12 @@ namespace tr
 		private:
 			static tr::util::CLog log;
 			AuthState state;
-			CServerPacket *send_packet;
+			CServerPacket* send_packet;
 			
 			std::string account_name;
 			int64_t UID;
+            
+            CSession session;
 		public:
 			TRConnection( CSocket& socket, CSelector& selector)
 			: CConnection( socket, selector )

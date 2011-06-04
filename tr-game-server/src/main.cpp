@@ -6,7 +6,6 @@
 #include "server.h"
 #include "crypto.h"
 #include "DBMgr.h"
-#include "SessionMgr.h"
 #include "ThreadUtils.h"
 #include <pthread.h>
 
@@ -35,8 +34,9 @@ int main (int argc, char * const argv[])
 	printf("Load Database Driver...\n");
 	tr::util::DBMgr::create( "127.0.0.1", 8889, "root", "root", "tabuladb" );
 	printf("Database loaded OK\n");
-	tr::net::CServer server(8001);
-
+    
+    tr::net::CGameServer gs = tr::net::CGameServer::load_by_id(53);
+	tr::net::CServer server(gs);
 	
 	server.start();
 	
