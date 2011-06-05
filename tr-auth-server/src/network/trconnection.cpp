@@ -199,6 +199,7 @@ void TRConnection::on_read()
 		}
 		break;
 	default:
+            printf("Unknown OpCode: %X\n", opcode);
 		send_packet = new SMSG_AuthError(AuthError::SYSTEM_ERROR);
 		send_packet->write(*this);
 		send();

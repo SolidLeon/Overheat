@@ -127,12 +127,16 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
     {
         //Client passed first handshake
         //Now do the DiffieHellman Key exchange
+        printf(">> Accepted a new Client for First DH KeyExchange\n");
         close();
     }
     else if( state == AUTHED_GG_FIRST )
     {
         //Client passed the second handshake,
         //Do again the handshake but instead of forwarding, send character data
+        printf(">->->->->->->->->->->->->->->->->->->->->->->->->->->->->->\n");
+        printf(">> GAME_SERVER: New Player\n");
+        printf(">->->->->->->->->->->->->->->->->->->->->->->->->->->->->->\n");
         close();
     }
 }

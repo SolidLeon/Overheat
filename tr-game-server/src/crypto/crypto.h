@@ -15,7 +15,7 @@
 #include "trcrypt.h"
 #include "trcrypt2.h"
 #include "rsa.h"
-
+#include <openssl/dh.h>
 #include "md5.h"
 
 namespace tr

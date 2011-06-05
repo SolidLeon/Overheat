@@ -23,8 +23,17 @@ void* game_auth_gg_main(void* param);
 void* game_auth1_main(void* param);
 void* game_auth2_main(void* param);
 
+#include <openssl/dh.h>
+#include <openssl/bn.h>
 int main (int argc, char * const argv[]) 
 {	
+    DH* dh = DH_new();
+    dh = DH_generate_parameters(0x40, 5, NULL, NULL);
+    
+    printf("DH\n");
+    printf(" Length: %d\n", dh->length);
+    
+    return 0;
 	printf(" ==============================================================================\r\n");
 	printf("                                    Overheat                                   \r\n");
 	printf("                                Auth Game Server                            \r\n\r\n");

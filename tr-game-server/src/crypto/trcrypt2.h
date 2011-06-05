@@ -13,6 +13,7 @@
 #include "types.h"
 #include <string>
 #include "md5.h"
+#include <openssl/dh.h>
 
 
 #define BYTE1(x) ((x&0xFF00)>>8)
@@ -46,13 +47,27 @@ namespace tr
 			//K must have a size of 0x40(64) bytes!
 			void Tabula_CryptInit2(TABULACRYPT2 *tbc2, uint8_t *InputK);
 			
+            DH *dh;
+            TABULACRYPT2 tbc2;
 		public:
+            
 			CTRCrypt2()
 			{
-				//Tabula_CryptInit2(<#TABULACRYPT2 *tbc2#>, <#uint8_t *InputK#>)
+                setup_dh();
+				//Tabula_CryptInit2(&tbc2, k);
 			}
 			void Tabula_Encrypt2(TABULACRYPT2 *tbc2, uint32_t *PacketData, uint32_t Len);			
 			void Tabula_Decrypt2(TABULACRYPT2 *tbc2, uint32_t *PacketData, uint32_t Len);
+            
+            //Diffie Hellman
+            void setup_dh()
+            {
+                int codes = 0;
+                dh = DH_new();
+                DH_generate_parameters_ex(dh, 2, DH_GENERATOR_5, 0);
+                DH_check(dh, &codes);
+                DH_generate_key(dh);
+            }
 		private:	
 		};
 	}

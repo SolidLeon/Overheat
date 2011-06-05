@@ -30,6 +30,7 @@ CCryptMgr::CCryptMgr()
 	this->blowfish.BFInit();
 	this->trcrypt.TRInit();
 	this->_rsa.RSAInit();
+    DH_new();
 }
 
 CCryptMgr::~CCryptMgr()
