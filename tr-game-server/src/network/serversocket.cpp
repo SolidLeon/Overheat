@@ -20,7 +20,6 @@ static CLog log = CLog::get_logger("ServerSocket");
 CServerSocket::CServerSocket( int port )
 {
 	this->port = port;
-	init();
 }
 
 //Initializes this server socket

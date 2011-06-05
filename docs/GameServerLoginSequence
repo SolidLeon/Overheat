@@ -61,7 +61,7 @@ will use this value.
 
 ----- Client disconnects -----
 
------ Client connects to IP:8001 (specified by AuthServer) -----
+----- Client connects to IP:8001 (specified by SMSG_ITD_FORWARD (GAthSrvIP and Port)) -----
 
 Now the same thing repeats but with real values
 

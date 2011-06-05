@@ -42,6 +42,8 @@ namespace tr
 			std::vector<CConnection*> clients;
             
             CGameServer game_server;
+            
+            int type;
 			//main loop
 			void main_loop();
 			
@@ -50,6 +52,12 @@ namespace tr
 			void on_read( CSocket&, packet::CPacketBuffer& );
 
 		public:
+            enum SERVER_PORT_TYPE {
+                AUTH_GG,
+                AUTH_GG_FIRST,
+                AUTH_GAMING
+            };
+			CServer( int, CGameServer& );
 			CServer( CGameServer& );
 			void start();
 			

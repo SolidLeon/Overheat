@@ -188,6 +188,14 @@ void TRConnection::on_read()
 				::log.info(s.c_str());
                 close();
 			}
+            else
+            {
+                std::stringstream str;
+                str << "Handoff client failed, invalid serverID: ";
+                str << serverID;
+                ::log.info(str.str().c_str());
+                close();
+            }
 		}
 		break;
 	default:

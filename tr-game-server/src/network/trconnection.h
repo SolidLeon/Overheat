@@ -37,7 +37,9 @@ namespace tr
 		public:
 			enum AuthState {
 				CONNECTED,
-				AUTHED
+				AUTHED_GG,
+                AUTHED_GG_FIRST,
+                CONNECTED_TO_GAME
 			};
 		private:
 			static tr::util::CLog log;
@@ -58,7 +60,11 @@ namespace tr
 			{
 				delete send_packet;
 			}
-			virtual void on_accept();
+            void connected(AuthState state)
+            {
+                this->state = state;
+            }
+			virtual void on_accept( uint32_t gs_ip, uint32_t gs_port );
 			virtual void on_read();
 			virtual void on_write();
 			virtual void on_disconnect();

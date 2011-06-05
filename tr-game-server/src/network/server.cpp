@@ -18,14 +18,58 @@ using tr::util::CLog;
 
 static CLog log = CLog::get_logger( "Server" );
 
-CServer::CServer( CGameServer &gs )
-: game_server(gs), server(gs.get_port())
+//Creates server with port depending on type 
+//Type: 0 - auth_gg_port ; this is the port that the auth_server sends (AUTH_GG)
+//      1 - auth_port1 ; this is the first port the game_server sends (AUTH_GG_FIRST)
+//      2 - port ; this is the second port the game_server  sends, and the actual gaming port (AUTH_GAMING)
+CServer::CServer( int type, CGameServer &gs )
+: game_server(gs), server(0)
 {
+    this->type = type;
+    if( type == AUTH_GG )
+        server = CServerSocket(gs.get_auth_gg_port());
+    else if( type == AUTH_GG_FIRST )
+        server = CServerSocket(gs.get_auth_port1());
+    else if( type == AUTH_GAMING )
+        server = CServerSocket(gs.get_auth_gaming_port());
+    server.init();
+}
+
+//Creates Server with auth_gg_port as port
+CServer::CServer( CGameServer &gs )
+: game_server(gs), server(gs.get_auth_gg_port())
+{
+    this->type = AUTH_GG;
+    server.init();
 }
 
 void CServer::start()
 {
-    printf("Start Game Server %d\n", game_server.get_port());
+    std::string s;
+    int p = 0;
+    switch( type )
+    {
+        case AUTH_GG:
+            s = "Auth GG";
+            p = game_server.get_auth_gg_port();
+            break;
+        case AUTH_GG_FIRST:
+            s = "Auth GG First";
+            p = game_server.get_auth_port1();
+            break;
+        case AUTH_GAMING:
+            s = "Auth Gaming";
+            p = game_server.get_auth_gaming_port();
+            break;
+        default:
+            s = "INVALID SERVER TYPE";
+            break;
+    }
+    printf(">>--------------------------------------------------<<\n");
+    printf(">> Start Game Server on port %d (%s)<<\n", 
+           p,s.c_str());
+    printf(">>--------------------------------------------------<<\n");
+    
 	server._register( selector );
 	main_loop();
 }
@@ -63,7 +107,17 @@ void CServer::main_loop()
 			sck->_register( selector, CSelector::OP_READ );
 			CConnection *con = new TRConnection( *sck, selector );
 			clients.push_back( con );
-			con->on_accept();
+            //Switch TRConnection state depending on server type
+            switch( type )
+            {
+                case AUTH_GG: ((TRConnection*)con)->connected(tr::net::TRConnection::CONNECTED);
+                    break;
+                case AUTH_GG_FIRST: ((TRConnection*)con)->connected(tr::net::TRConnection::AUTHED_GG);
+                    break;
+                case AUTH_GAMING: ((TRConnection*)con)->connected(tr::net::TRConnection::AUTHED_GG_FIRST);
+                    break;
+            }
+			con->on_accept( game_server.get_ip(), game_server.get_auth_port1() );
 		}
 		for( int i = 0; i < clients.size(); i++ )
 		{			

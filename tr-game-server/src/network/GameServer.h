@@ -29,16 +29,22 @@ namespace tr
             uint16_t current_user_count;
             uint16_t max_user_count;
             uint8_t server_status;
-            
+            uint32_t auth_gg_port;
+            uint32_t auth_port1;
         public:
+            uint32_t get_ip() const { return host; }
             uint32_t get_port() const { return port; }
+            uint32_t get_auth_gg_port() const { return auth_gg_port; }
+            uint32_t get_auth_port1() const { return auth_port1; }
+            uint32_t get_auth_gaming_port() const { return port; }
+            
             static CGameServer& load_by_id( uint8_t server_id )
             {
                 CGameServer *gs = new CGameServer();
                 char sql[0xFF];
                 
                 
-                sprintf(sql, "SELECT server_id, host, port, age_limit, pk_flag, current_users, max_users, status FROM game_servers WHERE server_id = %d", server_id);
+                sprintf(sql, "SELECT server_id, host, port, age_limit, pk_flag, current_users, max_users, status, auth_gg_port, auth_port1 FROM game_servers WHERE server_id = %d", server_id);
                 
                 tr::util::DBMgr::get_instance().query(sql);
                 MYSQL_RES* res;
@@ -50,13 +56,16 @@ namespace tr
                     row = tr::util::DBMgr::get_instance().fetch_row(res);
                     
                     gs->server_id           = (uint8_t)atoi(row[0]);      //server_id
-                    gs->host                = strtoul(row[1], NULL,10);   //host 
+                    gs->host                = (uint32_t)(ip2ul(row[1]))&0xFFFFFFFF;   //host 
                     gs->port                = atoi(row[2]);               //port
                     gs->age_limit           = (uint8_t)atoi(row[3]);      //age_limit
                     gs->pk_flag             = (uint8_t)atoi(row[4]);      //pk_flag
                     gs->current_user_count  = atoi(row[5]);               //current_user_count
                     gs->max_user_count      = atoi(row[6]);               //max_user_count
                     gs->server_status       = (uint8_t)atoi(row[7]);      //server_status
+                    gs->auth_gg_port        = (uint32_t) atoi(row[8]);
+                    gs->auth_port1        = (uint32_t) atoi(row[9]);
+                    printf(">> GameServer: Loaded GS from Database: ID %d\n", gs->server_id);
                 }
                 else
                 {
@@ -68,7 +77,7 @@ namespace tr
             {
                 std::stringstream converter;
                 std::string sql;
-                std::string sServerID, sHost, sPort, sAgeLimit, sPkFlag, sCurrentUsers, sMaxUsers, sStatus;
+                std::string sServerID, sHost, sPort, sAgeLimit, sPkFlag, sCurrentUsers, sMaxUsers, sStatus, sAuthGGPort, sAuthPort1;
                 
                 converter << server_id; converter >> sServerID; converter.clear();
                 converter << host; converter >> sHost; converter.clear();
@@ -78,9 +87,11 @@ namespace tr
                 converter << current_user_count; converter >> sCurrentUsers; converter.clear();
                 converter << max_user_count; converter >> sMaxUsers; converter.clear();
                 converter << server_status; converter >> sStatus; converter.clear();
+                converter << auth_gg_port; converter >> sAuthGGPort; converter.clear();
+                converter << auth_port1; converter >> sAuthPort1; converter.clear();
                 
                 
-                sql = "INSERT INTO game_servers(server_id, host, port, age_limit, pk_flag, current_users, max_users, status, static) VALUES(";
+                sql = "INSERT INTO game_servers(server_id, host, port, age_limit, pk_flag, current_users, max_users, status, static, auth_gg_port, auth_port1) VALUES(";
                 sql += sServerID;
                 sql += ", ";
                 sql += sHost;
@@ -97,9 +108,38 @@ namespace tr
                 sql += ", ";
                 sql += sStatus;
                 sql += ", ";
-                sql += "0";
+                sql += "0, ";
+                sql += sAuthGGPort;
+                sql += ", ";
+                sql += sAuthPort1;
                 sql += ")";
                 tr::util::DBMgr::get_instance().query(sql.c_str());
+            }
+            
+            static uint64_t ip2ul(const char* ip)
+            {
+                unsigned long localhost = 16777343;
+                if(strcmp(ip, "localhost") == 0)
+                {
+                    return localhost;
+                }
+                
+                char sip[strlen(ip)];
+                strcpy(sip, ip); 
+                uint8_t bip[4];
+                char* token;
+                int i = 0;
+                for( token = strtok(sip, "."); token; token = strtok(NULL, "."))
+                {
+                    bip[i] = strtoul(token, NULL, 10);
+                    i++;
+                }
+                uint32_t uip = 0;
+                uip |= bip[0];
+                uip |= bip[1]<<8;
+                uip |= bip[2]<<16;
+                uip |= bip[3]<<24;
+                return uip;
             }
         };
     }

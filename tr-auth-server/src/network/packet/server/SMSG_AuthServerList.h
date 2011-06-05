@@ -13,7 +13,7 @@
 #include "serverpacket.h"
 #include "authcodes.h"
 #include "DBMgr.h"
-#include <arpa/inet.h>  x
+#include <arpa/inet.h> 
 
 using namespace tr::net;
 using tr::net::packet::CServerPacket;
@@ -50,7 +50,7 @@ public:
 		buf.put( get_opcode() );
 		
 		MYSQL_RES* res;
-		DBMgr::get_instance().query("SELECT server_id, host, port, age_limit, pk_flag, current_users, max_users, status FROM game_servers");
+		DBMgr::get_instance().query("SELECT server_id, host, port, age_limit, pk_flag, current_users, max_users, status, auth_gg_port FROM game_servers");
 		res = DBMgr::get_instance().store_result();
 		uint8_t server_count = DBMgr::get_instance().num_rows(res);
 		
@@ -65,7 +65,7 @@ public:
 			CAuthServer s = {
 				(uint8_t)atoi(row[0]), //server_id
 				ip, //host 
-				atoi(row[2]), //port
+				atoi(row[8]), //port, auth_gg_port
 				(uint8_t)atoi(row[3]), //age_limit
 				(uint8_t)atoi(row[4]), //pk_flag
 				atoi(row[5]), //current_user_count

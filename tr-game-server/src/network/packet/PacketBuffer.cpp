@@ -100,7 +100,7 @@ uint16_t CPacketBuffer::getUShort()
 
 uint32_t CPacketBuffer::getUInt()
 {
-	uint16_t v = 0;
+	uint32_t v = 0;
 	if( m_bo == BO_BIG_ENDIAN )
 	{
 		v = m_buf[m_position]<<24;
@@ -155,19 +155,26 @@ void CPacketBuffer::putUShort( uint16_t h )
 
 void CPacketBuffer::putUInt( uint32_t d ) 
 {
+    //BIG ENDIAN
+    //HH .. .. LL
+    //24 16 08 00
+    
+    //LL .. .. HH
+    //00 08 16 24
+    
 	if( m_bo == BO_BIG_ENDIAN )
 	{
-		m_buf[m_position]	= (uint8_t)(d>>24);
-		m_buf[m_position+1]	= (uint8_t)(d>>16);
-		m_buf[m_position+2]	= (uint8_t)(d>>8);
-		m_buf[m_position+3] = (uint8_t)d;
+		m_buf[m_position]	= (uint8_t)((d&0xFF000000)>>24);
+		m_buf[m_position+1]	= (uint8_t)((d&0x00FF0000)>>16);
+		m_buf[m_position+2]	= (uint8_t)((d&0x0000FF00)>>8);
+		m_buf[m_position+3] = (uint8_t)( d&0x000000FF);
 	}
 	else
 	{
-		m_buf[m_position]	= (uint8_t)(d);
-		m_buf[m_position+1]	= (uint8_t)(d>>8);
-		m_buf[m_position+2]	= (uint8_t)(d>>16);
-		m_buf[m_position+3]	= (uint8_t)(d>>24);
+		m_buf[m_position]	= (uint8_t)((d&0x000000FF));
+		m_buf[m_position+1]	= (uint8_t)((d&0x0000FF00)>>8);
+		m_buf[m_position+2]	= (uint8_t)((d&0x00FF0000)>>16);
+		m_buf[m_position+3]	= (uint8_t)((d&0xFF000000)>>24);
 	}
 	m_position += 4;
 }
@@ -214,6 +221,8 @@ void CPacketBuffer::debug_out( )
 	//printf("Mark: %d\n", m_mark);
 	//printf("Remaining: %d\n", remaining());
 	//printf("-- DATA --\n");
+    int p = position();
+    rewind();
 	printf("--------------------------------------------------------------------------------\nPacket: %d\n", limit());
 	for(int i = 0; i < remaining(); i++)
 	{
@@ -221,4 +230,5 @@ void CPacketBuffer::debug_out( )
 		printf("%02X  ", m_buf[i]);
 	}
 	printf("\n\n");
+    position(p);
 }

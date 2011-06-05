@@ -41,14 +41,23 @@ namespace tr
 			/* socker address structure */
 			struct sockaddr_in servaddr;
 			
-			void init();
 			
 		public:
 			CServerSocket( int );
 			
 			CSocket* accept( void );
+			void init();
 			
 			void _register( CSelector& );
+            
+            uint32_t get_ip()
+            {
+                return servaddr.sin_addr.s_addr;
+            }
+            uint32_t get_port()
+            {
+                return servaddr.sin_port;
+            }
 		}; //CServerSocket
 	}// net
 }//tr

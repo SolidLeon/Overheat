@@ -6,10 +6,15 @@
  *  Copyright 2011 Overheat. All rights reserved.
  *
  */
- // TODO: on_accept
- // TODO: on_read
- // TODO: on_write
- // TODO: on_disconnect
+//TODO: on_accept
+//TODO: on_read
+//TODO: on_write
+//TODO: on_disconnect
+//TODO: on_accept(): 2nd handshake
+//TODO: on_accept(): DH KeyExchange
+//TODO: on_accept(): 3rd handshake
+//FIXME: on_accept(): remove close() in the on_accept() handler
+// for the gaming port, must be removed, since the Game Server does not remove the player after handshake
 
 #include "trconnection.h"
 
@@ -17,91 +22,119 @@ using namespace tr::net;
 
 static tr::util::CLog log = tr::util::CLog::get_logger( "TRConnection" );
 
-void TRConnection::on_accept()
+void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
 {
-    struct CMSG_ITD_FAKE1RESPONSE {
-        uint32_t packet_len;
-        uint32_t blen;
-        uint8_t client_pubkey[6];
-    } p1;
-    struct CMSG_ITD_FAKE2RESPONSE {
-        uint32_t packet_len;
-        uint8_t op;
-        uint32_t login_id1;
-        uint32_t login_id2;
-    }p2;
-	CPacketBuffer packet(8192);
-	packet.byte_order(CPacketBuffer::BO_LITTLE_ENDIAN);
-	//SMSG_ITD_FAKE1
-	packet.clear();
-	packet.putUInt(0x1b);
-	packet.putUInt(0x08);
-	packet.putUInt(0x06);
-	packet.putUInt(0x01);
-	packet.put(0x50).put(0x55).put(0x42).put(0x4b).put(0x45).put(0x59).put(0x31).put(0x32); //PUBKEY12
-	packet.put(0x46).put(0x4f).put(0x4f).put(0x42).put(0x41).put(0x52); //FOOBAR
-	packet.put(0x41);
-	packet.flip();
-	CConnection::send(packet);
-	//CMSG_ITD_FAKE1RESPONSE
-	try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
-	m_in.rewind();
-	p1.packet_len = m_in.getUInt();
-	if( m_in.array()[0] != 0x0C )
-	{
-		::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
-        printf("Data: %X\n", *(uint32_t*)&p1);
-		close();
-		return;
-	}
-	p1.blen = m_in.getUInt();
-	memcpy(m_in.array() + 8,p1.client_pubkey, 6);
-	
-	//SMSG_ITD_FAKE2
-	packet.clear();
-	packet.putUInt(0x06);
-	packet.put(0x45).put(0x4e).put(0x43).put(0x20).put(0x4f).put(0x4b); //ENC_OK
-	packet.flip();
-	CConnection::send(packet);
-    
-    //CMSG_ITD_FAKE2RESPONSE
-	try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
-	m_in.rewind();
-    
-	p2.packet_len = m_in.getUInt();
-	if( m_in.array()[0] != 0x09 )
-	{
-		::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
-		close();
-		return;
-	}
-    m_in.debug_out();
-    p2.op = m_in.get();
-    p2.login_id1 = m_in.getUInt();
-    p2.login_id2 = m_in.getUInt();
-    session.update(p2.login_id1, p2.login_id2);
-    printf("SESSION UPDATE: sessionID1=%d, sessionID2=%d\n", session.session1(), session.session2());
-    
-    //SMSG_ITD_FAKE3
-    packet.clear();
-    packet.putUInt(0x09);
-    packet.put(0x0d);
-    packet.putUInt(0x00);
-    packet.putUInt(0x50);
-	packet.flip();
-	CConnection::send(packet);
-    
-    //SMSG_ITD_FORWARD
-    packet.clear();
-    packet.putUInt(0x11);
-    packet.put(0x0e);
-    packet.putUInt(0x89f86bd8);
-    packet.putUInt(0x00001f41);
-    packet.putUInt(session.session1());
-    packet.putUInt(session.session2());
-    packet.flip();
-    CConnection::send(packet);
-    
+    //Switch action depending on STATE
+    if( state == CONNECTED )
+    {
+        //Client just got forwarded from the AUTH_SERVER to the GAME_SERVER
+        //Do the first handshake
+        struct CMSG_ITD_FAKE1RESPONSE {
+            uint32_t packet_len;
+            uint32_t blen;
+            uint8_t client_pubkey[6];
+        } p1;
+        struct CMSG_ITD_FAKE2RESPONSE {
+            uint32_t packet_len;
+            uint8_t op;
+            uint32_t login_id1;
+            uint32_t login_id2;
+        }p2;
+        CPacketBuffer packet(8192);
+        packet.byte_order(CPacketBuffer::BO_LITTLE_ENDIAN);
+        //SMSG_ITD_FAKE1
+        //SMSG_SERVERKEY
+        packet.clear();
+        packet.putUInt(0x1b);
+        packet.putUInt(0x08);
+        packet.putUInt(0x06);
+        packet.putUInt(0x01);
+        packet.put(0x50).put(0x55).put(0x42).put(0x4b).put(0x45).put(0x59).put(0x31).put(0x32); //PUBKEY12
+        packet.put(0x46).put(0x4f).put(0x4f).put(0x42).put(0x41).put(0x52); //FOOBAR
+        packet.put(0x41);
+        packet.flip();
+        CConnection::send(packet);
+        //CMSG_ITD_FAKE1RESPONSE
+        //CMSG
+        try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
+        m_in.rewind();
+        p1.packet_len = m_in.getUInt();
+        if( m_in.array()[0] != 0x0C )
+        {
+            ::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+            printf("Data: %X\n", *(uint32_t*)&p1);
+            close();
+            return;
+        }
+        p1.blen = m_in.getUInt();
+        memcpy(m_in.array() + 8,p1.client_pubkey, 6);
+        
+        //SMSG_ITD_FAKE2
+        packet.clear();
+        packet.putUInt(0x06);
+        packet.put(0x45).put(0x4e).put(0x43).put(0x20).put(0x4f).put(0x4b); //ENC_OK
+        packet.flip();
+        CConnection::send(packet);
+        
+        //CMSG_ITD_FAKE2RESPONSE
+        //CMSG_SESSION
+        m_in.clear();
+        try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
+        m_in.rewind();
+        
+        p2.packet_len = m_in.getUInt();
+        printf("PacketLen: %d\n", p2.packet_len);
+        if( m_in.array()[0] != 0x09 )
+        {
+            ::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+            close();
+            return;
+        }
+        m_in.debug_out();
+        p2.op = m_in.get();
+        p2.login_id1 = m_in.getUInt();
+        p2.login_id2 = m_in.getUInt();
+        session.update(p2.login_id1, p2.login_id2);
+        printf("SESSION UPDATE: sessionID1=%X, sessionID2=%X\n", session.session1(), session.session2());
+        
+        //SMSG_ITD_FAKE3
+        //SMSG_QUEUE_POSITION
+        packet.clear();
+        packet.putUInt(0x09);
+        packet.put(0x0d);
+        packet.putUInt(0x00); //Position
+        packet.putUInt(0x00); //Estimated Time
+        packet.flip();
+        CConnection::send(packet);
+        
+        //SMSG_ITD_FORWARD
+        printf("Forward to GS IP: %X, on port %X\n", gs_ip, gs_port);
+        
+        packet.clear();
+        packet.putUInt(0x11);
+        packet.put(0x0e);
+        packet.putUInt(gs_ip); //(0x89f86bd8);
+        packet.putUInt(gs_port); //(0x00001f41);
+        packet.putUInt(session.session1());
+        packet.putUInt(session.session2());
+        packet.flip();
+        CConnection::send(packet);
+        
+        //Client disconnectes and connects to SMSG_ITD_FORWARD Gip and Port
+        close();
+    }
+    else if( state == AUTHED_GG )
+    {
+        //Client passed first handshake
+        //Now do the DiffieHellman Key exchange
+        close();
+    }
+    else if( state == AUTHED_GG_FIRST )
+    {
+        //Client passed the second handshake,
+        //Do again the handshake but instead of forwarding, send character data
+        close();
+    }
 }
 
 void TRConnection::on_read()
@@ -153,6 +186,7 @@ void TRConnection::on_disconnect()
 
 void TRConnection::send()
 {
+    /*
 	if( state == AUTHED )
 	{
 		char buffer[128];
@@ -191,7 +225,7 @@ void TRConnection::send()
 	}
 	else {
 		//m_out.debug_out();
-		CConnection::send( );
-	}
+     CConnection::send( );
+	}*/
 	
 }

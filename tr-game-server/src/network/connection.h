@@ -20,6 +20,7 @@
 #include "selector.h"
 #include "PacketBuffer.h"
 #include "closeconnectionex.h"
+#include "types.h"
 
 
 using namespace std;
@@ -46,7 +47,7 @@ namespace tr
 				//delete[] ip;
 			}
 			//Event Handler
-			virtual void on_accept() = 0;
+			virtual void on_accept( uint32_t gs_ip, uint32_t gs_port ) = 0;
 			virtual void on_read();
 			virtual void on_write() = 0;
 			virtual void on_disconnect() = 0;
