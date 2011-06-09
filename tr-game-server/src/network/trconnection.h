@@ -42,7 +42,7 @@ namespace tr
                 CONNECTED_TO_GAME
 			};
 		private:
-			static tr::util::CLog log;
+			//static tr::util::CLog log;
 			AuthState state;
 			CServerPacket* send_packet;
 			
@@ -50,9 +50,10 @@ namespace tr
 			int64_t UID;
             
             CSession session;
+            crypto::CTRCrypt2 crypt; 
 		public:
 			TRConnection( CSocket& socket, CSelector& selector)
-			: CConnection( socket, selector )
+			: CConnection( socket, selector ), crypt()
 			{
 				state = CONNECTED;
 			}
@@ -63,6 +64,18 @@ namespace tr
             void connected(AuthState state)
             {
                 this->state = state;
+                printf("Created new TR Connection State: ");
+                switch( state )
+                {
+                    case CONNECTED: printf( "Connected\n");
+                        break;
+                    case AUTHED_GG: printf( "AUTHED_GG\n");
+                        break;
+                    case AUTHED_GG_FIRST: printf( "AUTHED_GG_FIRST\n");
+                        break;
+                    case CONNECTED_TO_GAME: printf( "Connected to Game\n");
+                        break;
+                }
             }
 			virtual void on_accept( uint32_t gs_ip, uint32_t gs_port );
 			virtual void on_read();

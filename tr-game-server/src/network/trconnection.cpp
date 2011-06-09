@@ -20,7 +20,7 @@
 
 using namespace tr::net;
 
-static tr::util::CLog log = tr::util::CLog::get_logger( "TRConnection" );
+//static tr::util::CLog log = tr::util::CLog::get_logger( "TRConnection" );
 
 void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
 {
@@ -61,7 +61,8 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         p1.packet_len = m_in.getUInt();
         if( m_in.array()[0] != 0x0C )
         {
-            ::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+            //::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+            printf("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
             printf("Data: %X\n", *(uint32_t*)&p1);
             close();
             return;
@@ -86,7 +87,8 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         printf("PacketLen: %d\n", p2.packet_len);
         if( m_in.array()[0] != 0x09 )
         {
-            ::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+            //::log.info("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
+            printf("CMSG_ITD_FAKE1RESPONSE: Wrong packet len!");
             close();
             return;
         }
@@ -125,9 +127,81 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
     }
     else if( state == AUTHED_GG )
     {
+        
+        struct CMSG_AUTH_B {
+            uint32_t packet_len;
+            uint32_t blen;
+            
+        } p1;
         //Client passed first handshake
         //Now do the DiffieHellman Key exchange
         printf(">> Accepted a new Client for First DH KeyExchange\n");
+        //Create DH values
+        crypt.setup_dh();
+        //SMSG_AUTH_HELLO
+        //send g,p,A to client
+        m_out.clear();
+        m_out.putUInt(0x8D); //packet length
+        m_out.putUInt(0x40); //LenA
+        m_out.putUInt(0x40); //LenP
+        m_out.putUInt(0x01); //LenG  
+        uint8_t A[0x40];
+        uint8_t P[0x40];
+        BN_bn2bin(crypt.A(), A);
+        BN_bn2bin(crypt.Prime(), P);
+        m_out.putArray(A, 0x40);
+        m_out.putArray(P, 0x40);
+        m_out.put(0x05);
+        m_out.flip();
+        CConnection::send( m_out );
+        
+        //CMSG_AUTH_B
+        m_in.clear();
+        try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
+        m_in.rewind();
+        printf("===== CMSG_AUTH_B =====\n");
+        m_in.debug_out();
+        p1.packet_len = m_in.getUInt();
+        printf("PacketLen: %d\n", p1.packet_len);
+        if( m_in.array()[0] != 0x44 )
+        {
+            //::log.info("CMSG_AUTH_B: Wrong packet len!");
+            printf("CMSG_AUTH_B: Wrong packet len!\n");
+            close();
+            return;
+        }
+        uint8_t B[0x40];
+        memcpy((void*)B, (void*)(m_in.array() + 8), 0x40);
+        BIGNUM *b = BN_new();
+        BN_bin2bn(B, 0x40, b);
+        crypt.DH_UpdateB(b);
+        //DH Key Exchange completed
+        
+        //SMSG_ENCOK
+        m_out.clear();
+        
+        m_out.putUInt(0x08);
+        m_out.putUShort(0x02);
+        m_out.put('E');
+        m_out.put('N');
+        m_out.put('C');
+        m_out.put(' ');
+        m_out.put('O');
+        m_out.put('K');
+        
+        m_out.flip();
+        crypt.encrypt((uint32_t*)(m_out.array()+4), 8);
+        CConnection::send(m_out);
+        
+        m_in.clear();
+        try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
+        m_in.rewind();
+        
+        m_in.debug_out();
+        
+        //Pass to next Gameserver
+        state = AUTHED_GG_FIRST;
+        
         close();
     }
     else if( state == AUTHED_GG_FIRST )
@@ -161,7 +235,8 @@ void TRConnection::on_read()
 	int packet_size = *(unsigned short*) m_in.array();
 	if( packet_size != m_in.limit() )
 	{
-		::log.info("ERROR: Wrong packet size");
+		//::log.info("ERROR: Wrong packet size");
+		printf("ERROR: Wrong packet size");
 	}
 		
 	//Each Packet is BF encrypted
@@ -190,8 +265,7 @@ void TRConnection::on_disconnect()
 
 void TRConnection::send()
 {
-    /*
-	if( state == AUTHED )
+	if( state == AUTHED_GG_FIRST )
 	{
 		char buffer[128];
 		memset((void*)buffer, 0, 128);
@@ -217,8 +291,8 @@ void TRConnection::send()
 		for(int p=0; p<(length-2)/8; p++)
 		{
 			CCryptMgr::instance().get_blowfish().BFEncrypt(
-														 (uint32_t*)&buffer[p*8+2], 
-														 (uint32_t*)&buffer[6 + p*8]);
+                                                           (uint32_t*)&buffer[p*8+2], 
+                                                           (uint32_t*)&buffer[6 + p*8]);
 		}
 		//printf("POST-ENCRYPT PACKET: Size: %X\n", length); 
 		m_out.clear();
@@ -229,7 +303,6 @@ void TRConnection::send()
 	}
 	else {
 		//m_out.debug_out();
-     CConnection::send( );
-	}*/
-	
+		CConnection::send( );
+	}
 }

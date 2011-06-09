@@ -287,6 +287,11 @@ uint8_t CompareD[0x1018 + 0x10] =
 #pragma mark -
 #pragma mark Methods
 
+#define BYTE1(x) ((x&0xFF00) >> 8)
+#define _BYTE uint8_t
+#define _DWORD uint32_t
+
+
 //int __usercall sub_709330<eax>(uint32_t *result<eax>, uint32_t *a2<esi>)
 void CTRCrypt2::sub_709330(uint32_t *result, uint32_t *a2)
 {
@@ -316,111 +321,111 @@ void CTRCrypt2::sub_709330(uint32_t *result, uint32_t *a2)
 //int __usercall sub_708C60<eax>(uint8_t *input<eax>, uint8_t *output)
 void CTRCrypt2::Copy_708C60(uint8_t *input, uint8_t *output)
 {
-	int v2; // eax@1
-	int v3; // ecx@1
+	int64_t v2; // eax@1
+	int64_t v3; // ecx@1
 	void *v4; // ebx@1
 	uint8_t *v5; // edi@1
-	int v6; // esi@1
-	int v7; // eax@2
-	int v8; // edx@2
-	int v9; // eax@4
-	int v10; // edx@4
-	int v11; // eax@6
-	int v12; // edx@6
-	int v13; // eax@8
-	int v14; // edx@8
-	int v15; // eax@10
-	int v16; // edx@10
-	int v17; // eax@12
-	int v18; // edx@12
-	int v19; // eax@14
-	int v20; // edx@14
-	int v21; // eax@16
-	int v22; // edx@16
-	int v23; // eax@18
-	int v24; // edx@18
-	int v25; // eax@20
-	int v26; // edx@20
-	int v27; // eax@22
-	int v28; // edx@22
-	int v29; // edx@24
+	int64_t v6; // esi@1
+	int64_t v7; // eax@2
+	int64_t v8; // edx@2
+	int64_t v9; // eax@4
+	int64_t v10; // edx@4
+	int64_t v11; // eax@6
+	int64_t v12; // edx@6
+	int64_t v13; // eax@8
+	int64_t v14; // edx@8
+	int64_t v15; // eax@10
+	int64_t v16; // edx@10
+	int64_t v17; // eax@12
+	int64_t v18; // edx@12
+	int64_t v19; // eax@14
+	int64_t v20; // edx@14
+	int64_t v21; // eax@16
+	int64_t v22; // edx@16
+	int64_t v23; // eax@18
+	int64_t v24; // edx@18
+	int64_t v25; // eax@20
+	int64_t v26; // edx@20
+	int64_t v27; // eax@22
+	int64_t v28; // edx@22
+	int64_t v29; // edx@24
 	signed int v30; // edi@27
 	signed int v31; // edi@29
-	int result; // eax@30
-	int v33; // ebp@4
-	int v34; // ebp@6
-	int v35; // ebp@8
-	int v36; // ebp@22
-	int v37; // ebp@24
-	int v39; // ecx@28
+	int64_t result; // eax@30
+	int64_t v33; // ebp@4
+	int64_t v34; // ebp@6
+	int64_t v35; // ebp@8
+	int64_t v36; // ebp@22
+	int64_t v37; // ebp@24
+	int64_t v39; // ecx@28
 	uint32_t a2[2]; // [sp+Ch] [bp-8h]@27
 						//int v41; // [sp+10h] [bp-4h]@27
 	
 	v4 = output;
 	v5 = input;
-	memset(output, 0, 0x1018u);
+	memset(output, 0, 0x1018);
 	memcpy(v4, UnknownCryptTable1_BAE6D0, 0x1018u);
-	v2 = (int)(long)v5;
-	v3 = (int)(long)(v5 + 8);
-	v6 = (int)(long)((char *)v4 + 8);
+	v2 = (int64_t)v5;
+	v3 = (int64_t)(v5 + 8);
+	v6 = (int64_t)((char *)v4 + 8);
 	output = (uint8_t *)2;
 	do
 	{
 		v8 = *(_BYTE *)v2;
 		v7 = v2 + 1;
-		if ( v7 >= (uint32_t)v3 )
-			v7 = (int)(long)v5;
+		if ( v7 >= (uint64_t)v3 )
+			v7 = (int64_t)v5;
 		v33 = *(_BYTE *)v7;
 		v9 = v7 + 1;
 		v10 = v33 | (v8 << 8);
-		if ( v9 >= (uint32_t)v3 )
-			v9 = (int)(long)v5;
+		if ( v9 >= (uint64_t)v3 )
+			v9 = (int64_t)v5;
 		v34 = *(_BYTE *)v9;
 		v11 = v9 + 1;
 		v12 = v34 | (v10 << 8);
-		if ( v11 >= (uint32_t)v3 )
-			v11 = (int)(long)v5;
+		if ( v11 >= (uint64_t)v3 )
+			v11 = (int64_t)v5;
 		v35 = *(_BYTE *)v11;
 		v13 = v11 + 1;
 		v14 = v35 | (v12 << 8);
-		if ( v13 >= (uint32_t)v3 )
-			v13 = (int)(long)v5;
+		if ( v13 >= (uint64_t)v3 )
+			v13 = (int64_t)v5;
 		*(_DWORD *)(v6 - 8) ^= v14;
 		v16 = *(_BYTE *)v13;
 		v15 = v13 + 1;
-		if ( v15 >= (uint32_t)v3 )
-			v15 = (int)(long)v5;
+		if ( v15 >= (uint64_t)v3 )
+			v15 = (int64_t)v5;
 		v18 = *(_BYTE *)v15 | (v16 << 8);
 		v17 = v15 + 1;
-		if ( v17 >= (uint32_t)v3 )
-			v17 = (int)(long)v5;
+		if ( v17 >= (uint64_t)v3 )
+			v17 = (int64_t)v5;
 		v20 = *(_BYTE *)v17 | (v18 << 8);
 		v19 = v17 + 1;
-		if ( v19 >= (uint32_t)v3 )
-			v19 = (int)(long)v5;
+		if ( v19 >= (uint64_t)v3 )
+			v19 = (int64_t)v5;
 		v22 = *(_BYTE *)v19 | (v20 << 8);
 		v21 = v19 + 1;
-		if ( v21 >= (uint32_t)v3 )
-			v21 = (int)(long)v5;
+		if ( v21 >= (uint64_t)v3 )
+			v21 = (int64_t)v5;
 		*(_DWORD *)(v6 - 4) ^= v22;
 		v24 = *(_BYTE *)v21;
 		v23 = v21 + 1;
-		if ( v23 >= (uint32_t)v3 )
-			v23 = (int)(long)v5;
+		if ( v23 >= (uint64_t)v3 )
+			v23 = (int64_t)v5;
 		v26 = *(_BYTE *)v23 | (v24 << 8);
 		v25 = v23 + 1;
-		if ( v25 >= (uint32_t)v3 )
-			v25 = (int)(long)v5;
+		if ( v25 >= (uint64_t)v3 )
+			v25 = (int64_t)v5;
 		v36 = *(_BYTE *)v25;
 		v27 = v25 + 1;
 		v28 = v36 | (v26 << 8);
-		if ( v27 >= (uint32_t)v3 )
-			v27 = (int)(long)v5;
+		if ( v27 >= (uint64_t)v3 )
+			v27 = (int64_t)v5;
 		v37 = *(_BYTE *)v27;
 		v2 = v27 + 1;
 		v29 = v37 | (v28 << 8);
-		if ( v2 >= (uint32_t)v3 )
-			v2 = (int)(long)v5;
+		if ( v2 >= (uint64_t)v3 )
+			v2 = (int64_t)v5;
 		*(_DWORD *)v6 ^= v29;
 		v6 += 12;
 	}
@@ -449,7 +454,7 @@ void CTRCrypt2::Copy_708C60(uint8_t *input, uint8_t *output)
 }
 
 
-void CTRCrypt2::BuildDecryptorTableByK(uint8_t *in, uint32_t out)
+void CTRCrypt2::BuildDecryptorTableByK(uint8_t *in, uint64_t out)
 {
 	Copy_708C60((uint8_t*)in, (uint8_t*)out);
 }
@@ -554,7 +559,8 @@ void CTRCrypt2::__Tabula_Encrypt2(uint32_t *result, uint32_t *a2, uint32_t *X, u
 //K must have a size of 0x40(64) bytes!
 void CTRCrypt2::Tabula_CryptInit2(TABULACRYPT2 *tbc2, uint8_t *InputK)
 {
-	BuildDecryptorTableByK(InputK, (uint32_t)(long)tbc2->CryptBlock); //Note: We are giving pointer as second parameter, the type is just wrong
+    //!!!: ERROR in calculation because of 64bit
+	BuildDecryptorTableByK(InputK, (uint64_t)(tbc2->CryptBlock)); //Note: We are giving pointer as second parameter, the type is just wrong
 	MD5 md5 = MD5();
 	md5.update( InputK, 0x40 );
 	md5.finalize();
@@ -586,4 +592,67 @@ void CTRCrypt2::Tabula_Decrypt2(TABULACRYPT2 *tbc2, uint32_t *PacketData, uint32
 	uint32_t Y = SwitchEndianInt(((uint32_t*)tbc2->CryptBlock)[(0x101C)/4]);
 	for(uint32_t i=0; i<(Len/8); i++)
 		__Tabula_Decrypt2((uint32_t*)tbc2->CryptBlock, PacketData + i*2, &X, &Y);
+}
+
+
+CTRCrypt2::CTRCrypt2()
+{
+    bn_ctx = BN_CTX_new();
+    bnB = BN_new();
+    bnK = BN_new();
+    setup_dh();
+    
+    //Tabula_CryptInit2(&tbc2, k);
+}
+CTRCrypt2::~CTRCrypt2() 
+{
+    DH_free(dh);
+    
+    BN_CTX_free(bn_ctx);
+    BN_free(bnB);
+    BN_free(bnK);
+}
+
+//Diffie Hellman
+void CTRCrypt2::setup_dh()
+{
+    int codes = 0;
+    dh = DH_new();
+    dh = DH_generate_parameters(0x40*8,5,0,0);
+    DH_check(dh, &codes);
+    DH_generate_key(dh);
+}
+
+//Public Key, generator ^ priv_key
+const BIGNUM* CTRCrypt2::A() const
+{
+    return dh->pub_key;
+}
+//Primenumber
+const BIGNUM* CTRCrypt2::Prime() const
+{
+    return dh->p;
+}
+//Generator
+const BIGNUM* CTRCrypt2::G() const 
+{
+    return dh->g;
+}
+void CTRCrypt2::DH_UpdateB(BIGNUM* newB)
+{
+    BN_copy(bnB, newB);
+    BN_mod_exp(bnK,        bnB,               dh->priv_key,        dh->p,              bn_ctx);
+    //Init Tabula_Crypt2
+    uint8_t K[0x40];// = {0};
+    BN_bn2bin(bnK, K);
+    Tabula_CryptInit2(&tbc2, K);
+} 
+const BIGNUM* CTRCrypt2::K() const
+{
+    return bnK;
+}
+
+void CTRCrypt2::encrypt(uint32_t* packet_data, uint32_t len)
+{
+    Tabula_Encrypt2(&tbc2, packet_data, len);
 }

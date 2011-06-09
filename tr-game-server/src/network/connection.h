@@ -56,7 +56,7 @@ namespace tr
 			
 			std::vector<CPacketBuffer*>& get_msg_queue();
 			
-			const std::string& get_ip() const { return ip; }
+			const std::string& get_ip() const { return this->ip; }
 			
 			bool is_close_requested() const;
 			

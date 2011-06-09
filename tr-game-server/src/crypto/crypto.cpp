@@ -25,12 +25,10 @@ CCryptMgr& CCryptMgr::instance()
 
 CCryptMgr::CCryptMgr()
 {
-	printf("Copy Structure... %d - %d\n", sizeof(trcrypt.DecStruct2_CEA1B0), sizeof(CTRCrypt::CEA1B0_DATA));
-	trcrypt.DecStruct2_CEA1B0 = (CTRCrypt::_DecStruct2T*)CTRCrypt::CEA1B0_DATA;
+	//printf("Copy Structure... %d - %d\n", sizeof(trcrypt.DecStruct2_CEA1B0), sizeof(CTRCrypt::CEA1B0_DATA));
+	//trcrypt.DecStruct2_CEA1B0 = (CTRCrypt::_DecStruct2T*)CTRCrypt::CEA1B0_DATA;
 	this->blowfish.BFInit();
-	this->trcrypt.TRInit();
-	this->_rsa.RSAInit();
-    DH_new();
+	//this->trcrypt.TRInit();
 }
 
 CCryptMgr::~CCryptMgr()
@@ -51,9 +49,9 @@ CBlowfish& CCryptMgr::get_blowfish()
 	return blowfish;
 }
 
-CTRCrypt& CCryptMgr::get_tr_crypt()
+/*CTRCrypt& CCryptMgr::get_tr_crypt()
 {
 	return trcrypt;
-}
+}*/
 
 

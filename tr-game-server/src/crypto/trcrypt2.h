@@ -14,7 +14,7 @@
 #include <string>
 #include "md5.h"
 #include <openssl/dh.h>
-
+#include <openssl/bn.h>
 
 #define BYTE1(x) ((x&0xFF00)>>8)
 #define _BYTE	uint8_t
@@ -29,7 +29,7 @@ namespace tr
 		private:
 			typedef struct
 			{
-				unsigned char CryptBlock[0x1018+0x10]; //Unknown + MD5
+				unsigned char CryptBlock[0x1018 + 0x10]; //Unknown + MD5
 				unsigned char K[0x40]; //Backup of K
 			}TABULACRYPT2;
 			
@@ -40,34 +40,40 @@ namespace tr
 			void sub_709330(uint32_t *result, uint32_t *a2);			
 			//int __usercall sub_708C60<eax>(uint8_t *input<eax>, uint8_t *output)
 			void Copy_708C60(uint8_t *input, uint8_t *output);		
-			void BuildDecryptorTableByK(uint8_t *in, uint32_t out);
+			void BuildDecryptorTableByK(uint8_t *in, uint64_t out);
 			int SwitchEndianInt(int Value);
 			void __Tabula_Decrypt2(uint32_t *result, uint32_t *a2, uint32_t *X, uint32_t *Y);		
 			void __Tabula_Encrypt2(uint32_t *result, uint32_t *a2, uint32_t *X, uint32_t *Y);
 			//K must have a size of 0x40(64) bytes!
-			void Tabula_CryptInit2(TABULACRYPT2 *tbc2, uint8_t *InputK);
+			void Tabula_CryptInit2(TABULACRYPT2 *tbc2, uint8_t *InputK); //Call after key exchange
 			
             DH *dh;
+            BIGNUM* bnB;
+            BIGNUM* bnK;
+            BN_CTX *bn_ctx;
             TABULACRYPT2 tbc2;
+            
+            
 		public:
             
-			CTRCrypt2()
-			{
-                setup_dh();
-				//Tabula_CryptInit2(&tbc2, k);
-			}
+			CTRCrypt2();
+            ~CTRCrypt2();
 			void Tabula_Encrypt2(TABULACRYPT2 *tbc2, uint32_t *PacketData, uint32_t Len);			
 			void Tabula_Decrypt2(TABULACRYPT2 *tbc2, uint32_t *PacketData, uint32_t Len);
             
             //Diffie Hellman
-            void setup_dh()
-            {
-                int codes = 0;
-                dh = DH_new();
-                DH_generate_parameters_ex(dh, 2, DH_GENERATOR_5, 0);
-                DH_check(dh, &codes);
-                DH_generate_key(dh);
-            }
+            void setup_dh();
+            
+            //Public Key, generator ^ priv_key
+            const BIGNUM* A() const;
+            //Primenumber
+            const BIGNUM* Prime() const;
+            //Generator
+            const BIGNUM* G() const ;
+            void DH_UpdateB(BIGNUM* newB);
+            const BIGNUM* K() const;
+            
+            void encrypt(uint32_t* packet_data, uint32_t len);
 		private:	
 		};
 	}

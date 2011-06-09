@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "server.h"
-#include "crypto.h"
+//#include "crypto.h"
 #include "DBMgr.h"
 #include "ThreadUtils.h"
 #include <pthread.h>
@@ -18,30 +18,22 @@ bool server_running = true;
 #define Sleep(x) sleep(x/1000)
 #endif
 
-#include "PacketBuffer.h"
+//#include "PacketBuffer.h"
 void* game_auth_gg_main(void* param);
 void* game_auth1_main(void* param);
 void* game_auth2_main(void* param);
 
-#include <openssl/dh.h>
-#include <openssl/bn.h>
+
 int main (int argc, char * const argv[]) 
 {	
-    DH* dh = DH_new();
-    dh = DH_generate_parameters(0x40, 5, NULL, NULL);
-    
-    printf("DH\n");
-    printf(" Length: %d\n", dh->length);
-    
-    return 0;
 	printf(" ==============================================================================\r\n");
 	printf("                                    Overheat                                   \r\n");
 	printf("                                Auth Game Server                            \r\n\r\n");
 	printf("  Version 0.4                                             http://overheat.com/ \r\n");
 	printf(" ==============================================================================\r\n");
 
-	printf(">> Load Crypto...\n");
-	tr::crypto::CCryptMgr::instance();
+	//printf(">> Load Crypto...\n");
+	//tr::crypto::CCryptMgr::instance();
 	
 	printf(">> Load Database Driver...\n");
 	try { tr::util::DBMgr::create( "127.0.0.1", 8889, "root", "root", "tabuladb" ); } catch(const char* ex) { printf("Could not load Database: %s\n", ex); return 1; }
@@ -58,6 +50,7 @@ int main (int argc, char * const argv[])
 	if( Thread::New(&pt3, game_auth2_main, NULL)) printf("Game Auth 2 Thread started\n");
 	else printf("Could not start Game Auth 2 Thread!\n");
     Sleep(1000);
+    
 
     Thread::Join(pt1);
     Thread::Join(pt2);
