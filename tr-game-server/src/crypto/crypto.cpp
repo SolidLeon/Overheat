@@ -38,10 +38,11 @@ CCryptMgr::~CCryptMgr()
 
 std::string CCryptMgr::gen_md5( char* data, int length )
 {
+    /*
 	MD5 md5 = MD5();
 	md5.update( data, (unsigned) length );
 	md5.finalize();
-	return md5.hexdigest();
+	return md5.hexdigest();*/
 }
 
 CBlowfish& CCryptMgr::get_blowfish()

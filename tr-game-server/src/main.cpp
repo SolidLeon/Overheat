@@ -23,7 +23,6 @@ void* game_auth_gg_main(void* param);
 void* game_auth1_main(void* param);
 void* game_auth2_main(void* param);
 
-
 int main (int argc, char * const argv[]) 
 {	
 	printf(" ==============================================================================\r\n");
@@ -38,16 +37,17 @@ int main (int argc, char * const argv[])
 	printf(">> Load Database Driver...\n");
 	try { tr::util::DBMgr::create( "127.0.0.1", 8889, "root", "root", "tabuladb" ); } catch(const char* ex) { printf("Could not load Database: %s\n", ex); return 1; }
 	printf(">> Database loaded OK\n");
+    printf("\n");
     
     pthread_t pt1, pt2, pt3;
-	if( Thread::New(&pt1, game_auth_gg_main, NULL)) printf("Game Auth GG Thread started\n");
+	if( Thread::New(&pt1, game_auth_gg_main, NULL)) printf(">> Game Auth GG Thread started\n");
 	else printf("Could not start Game Auth GG Thread!\n");
     Sleep(1000);
-	if( Thread::New(&pt2, game_auth1_main, NULL)) printf("Game Auth 1 Thread started\n");
+	if( Thread::New(&pt2, game_auth1_main, NULL)) printf(">> Game Auth 1 Thread started\n");
 	else printf("Could not start Game Auth 1 Thread!\n");
     Sleep(1000);
 
-	if( Thread::New(&pt3, game_auth2_main, NULL)) printf("Game Auth 2 Thread started\n");
+	if( Thread::New(&pt3, game_auth2_main, NULL)) printf(">> Game Auth 2 Thread started\n");
 	else printf("Could not start Game Auth 2 Thread!\n");
     Sleep(1000);
     

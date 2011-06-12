@@ -159,10 +159,10 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         m_in.clear();
         try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
         m_in.rewind();
-        printf("===== CMSG_AUTH_B =====\n");
-        m_in.debug_out();
+        //printf("===== CMSG_AUTH_B =====\n");
+        //m_in.debug_out();
         p1.packet_len = m_in.getUInt();
-        printf("PacketLen: %d\n", p1.packet_len);
+        //printf("PacketLen: %d\n", p1.packet_len);
         if( m_in.array()[0] != 0x44 )
         {
             //::log.info("CMSG_AUTH_B: Wrong packet len!");
@@ -177,6 +177,38 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         crypt.DH_UpdateB(b);
         //DH Key Exchange completed
         
+        //Check encryption
+        /*unsigned char test_data[] = {
+            0x08, 0x00, 0x00, 0x00,
+            0x02, 0x00,
+            'E', 'N', 'C', ' ', 'O', 'K'
+        };
+        unsigned char encrypted[256];
+        unsigned char decrypted[256];
+        memcpy((void*)encrypted, (void*)(test_data),8+4);
+        crypt.encrypt((uint32_t*) (encrypted+4), 8);
+        memcpy((void*)decrypted, (void*)(encrypted), 8+4);
+        crypt.decrypt((uint32_t*) (decrypted+4), 8);
+        
+        printf("__ PACKET __\n");
+        for(int i = 0; i < 8+4; i++)
+        {
+            printf("%02X(%c)  ", test_data[i], (test_data[i] >= 'A' && test_data[i]<='Z'?test_data[i]: ' '));
+        }
+        printf("\n");
+        printf("__ ENC __\n");
+        for(int i = 0; i < 8+4; i++)
+        {
+            printf("%02X(%c)  ", encrypted[i], (encrypted[i] >= 'A' && encrypted[i]<='Z'?encrypted[i]: ' '));
+        }
+        printf("\n");
+        printf("__ DEC __\n");
+        for(int i = 0; i < 8+4; i++)
+        {
+            printf("%02X(%c)  ", decrypted[i], (decrypted[i] >= 'A' && decrypted[i]<='Z'?decrypted[i]: ' '));
+        }
+        printf("\n");*/
+        
         //SMSG_ENCOK
         m_out.clear();
         
@@ -190,18 +222,14 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         m_out.put('K');
         
         m_out.flip();
+        //m_out.debug_out();
         crypt.encrypt((uint32_t*)(m_out.array()+4), 8);
-        CConnection::send(m_out);
+        CConnection::send(m_out);//CLIENT DISCONNECTS RIGHT HERE
+        //???: Encryption wrong?
+        printf("Sent SMSG_ENCOK to %s\n", ip);
         
-        m_in.clear();
-        try {CConnection::on_read();}catch(CConnectionClosedEx ex) {close();return;}
-        m_in.rewind();
         
-        m_in.debug_out();
-        
-        //Pass to next Gameserver
-        state = AUTHED_GG_FIRST;
-        
+        printf("Pass Client to GameServer...\n");
         close();
     }
     else if( state == AUTHED_GG_FIRST )
@@ -219,7 +247,7 @@ void TRConnection::on_read()
 {
 	if( is_closed() || is_close_requested() )
 		return;
-	
+    printf("TRConnection: on_read() from %s\n", ip);
 	try
 	{
 		CConnection::on_read();
@@ -231,6 +259,12 @@ void TRConnection::on_read()
 	}
 	//handle packet
 	m_in.rewind();	
+    printf("TRConnection: read data from %s\n", ip);
+    printf("DATA:\n");
+    m_in.debug_out();
+    sleep(5);
+    
+//    crypt.decrypt((uint32_t*)(m_in.array()+4), packet_size);
 	
 	int packet_size = *(unsigned short*) m_in.array();
 	if( packet_size != m_in.limit() )

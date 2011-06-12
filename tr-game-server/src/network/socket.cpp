@@ -86,8 +86,9 @@ void CSocket::send( const char* buf, int size )
 	if ( size == 0 )
 		return;
 	int rc = ::send( this->socket, buf, size, 0 );
-	if( rc < 0 )
+	if( rc <= 0 )
 	{
+        throw new CConnectionClosedEx();
 		::log.error( "Could not send data" );
 	}
 	//std::stringstream s;
@@ -115,7 +116,7 @@ int CSocket::read( char* buf, int size )
 	if( rc <= 0 )
 	{
 		//::log.error( "Could not read data" );
-		throw CConnectionClosedEx();
+		throw new CConnectionClosedEx();
 	}
 	return rc;
 }

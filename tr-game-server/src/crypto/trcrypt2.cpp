@@ -287,20 +287,17 @@ uint8_t CompareD[0x1018 + 0x10] =
 #pragma mark -
 #pragma mark Methods
 
-#define BYTE1(x) ((x&0xFF00) >> 8)
-#define _BYTE uint8_t
-#define _DWORD uint32_t
 
 
 //int __usercall sub_709330<eax>(uint32_t *result<eax>, uint32_t *a2<esi>)
 void CTRCrypt2::sub_709330(uint32_t *result, uint32_t *a2)
 {
-	uint32_t v2; // edx@1
-	uint32_t v3; // ecx@1
-	uint32_t v4; // edx@1
-	uint32_t v5; // ecx@1
-	uint32_t v6; // edi@1
-	int v7; // edx@1
+	uint64_t v2; // edx@1
+	uint64_t v3; // ecx@1
+	uint64_t v4; // edx@1
+	uint64_t v5; // ecx@1
+	uint64_t v6; // edi@1
+	int64_t v7; // edx@1
 	
 	v2 = *result ^ *a2;
 	v3 = *(a2 + 1) ^ *(result + 1) ^ (result[(_BYTE)v2 + 774]
@@ -349,16 +346,16 @@ void CTRCrypt2::Copy_708C60(uint8_t *input, uint8_t *output)
 	int64_t v27; // eax@22
 	int64_t v28; // edx@22
 	int64_t v29; // edx@24
-	signed int v30; // edi@27
-	signed int v31; // edi@29
-	int64_t result; // eax@30
+	int64_t v30; // edi@27
+	int64_t v31; // edi@29
+	//int64_t result; // eax@30
 	int64_t v33; // ebp@4
 	int64_t v34; // ebp@6
 	int64_t v35; // ebp@8
 	int64_t v36; // ebp@22
 	int64_t v37; // ebp@24
-	int64_t v39; // ecx@28
-	uint32_t a2[2]; // [sp+Ch] [bp-8h]@27
+	//int64_t v39; // ecx@28
+	uint64_t a2[2]; // [sp+Ch] [bp-8h]@27
 						//int v41; // [sp+10h] [bp-4h]@27
 	
 	v4 = output;
@@ -435,7 +432,7 @@ void CTRCrypt2::Copy_708C60(uint8_t *input, uint8_t *output)
 	v30 = 0;
 	do
 	{
-		sub_709330((uint32_t *)v4, a2);
+		sub_709330((uint32_t *)v4, (uint32_t*)a2);
 		*((_DWORD *)v4 + v30) = a2[0];
 		*((_DWORD *)v4 + v30 + 1) = a2[1];
 		v30 += 2;
@@ -444,7 +441,7 @@ void CTRCrypt2::Copy_708C60(uint8_t *input, uint8_t *output)
 	v31 = 0;
 	do
 	{
-		sub_709330((uint32_t *)v4, a2);
+		sub_709330((uint32_t *)v4, (uint32_t*)a2);
 		*((_DWORD *)v4 + v31 + 6) = a2[0];
 		*((_DWORD *)v4 + v31 + 7) = a2[1];
 		v31 += 2;
@@ -461,12 +458,23 @@ void CTRCrypt2::BuildDecryptorTableByK(uint8_t *in, uint64_t out)
 
 int CTRCrypt2::SwitchEndianInt(int Value)
 {
+    uint8_t b1, b2, b3, b4;
+    b1 = (Value&0xFF000000) >> 24;
+    b2 = (Value&0x00FF0000) >> 16;
+    b3 = (Value&0x0000FF00) >> 8;
+    b4 = (Value&0x000000FF);
+    Value = 0;
+    Value |= b1;
+    Value |= b2<<8;
+    Value |= b3<<16;
+    Value |= b4<<24;
+    /*
 	__asm
 	{
 		MOV EAX, Value	
 		BSWAP EAX
 		MOV Value, EAX
-	}
+	}*/
 	return Value;
 }		
 
@@ -480,12 +488,12 @@ void CTRCrypt2::__Tabula_Decrypt2(uint32_t *result, uint32_t *a2, uint32_t *X, u
 	uint32_t X2 = a2[0];
 	uint32_t Y2 = a2[1];
 	
-	uint32_t v2; // edx@1
-	uint32_t v3; // ecx@1
-	uint32_t v4; // edx@1
-	uint32_t v5; // ecx@1
-	uint32_t v6; // edi@1
-	uint32_t v7; // edx@1
+	uint64_t v2; // edx@1
+	uint64_t v3; // ecx@1
+	uint64_t v4; // edx@1
+	uint64_t v5; // ecx@1
+	uint64_t v6; // edi@1
+	uint64_t v7; // edx@1
 	
 	v2 = *a2 ^ *(result + 5);
 	v3 = *(a2 + 1) ^ *(result + 4) ^ (result[(uint8_t)v2 + 774]
@@ -526,12 +534,12 @@ void CTRCrypt2::__Tabula_Encrypt2(uint32_t *result, uint32_t *a2, uint32_t *X, u
 				//Do main encryption
 	
 	
-	uint32_t v2; // edx@1
-	uint32_t v3; // ecx@1
-	uint32_t v4; // edx@1
-	uint32_t v5; // ecx@1
-	uint32_t v6; // edi@1
-	uint32_t v7; // edx@1
+	uint64_t v2; // edx@1
+	uint64_t v3; // ecx@1
+	uint64_t v4; // edx@1
+	uint64_t v5; // ecx@1
+	uint64_t v6; // edi@1
+	uint64_t v7; // edx@1
 	
 	v2 = *result ^ *a2;
 	v3 = *(a2 + 1) ^ *(result + 1) ^ (result[(uint8_t)v2 + 774]
@@ -561,9 +569,11 @@ void CTRCrypt2::Tabula_CryptInit2(TABULACRYPT2 *tbc2, uint8_t *InputK)
 {
     //!!!: ERROR in calculation because of 64bit
 	BuildDecryptorTableByK(InputK, (uint64_t)(tbc2->CryptBlock)); //Note: We are giving pointer as second parameter, the type is just wrong
-	MD5 md5 = MD5();
-	md5.update( InputK, 0x40 );
-	md5.finalize();
+    MD5_CTX md5;
+    MD5_Init(&md5);
+    MD5_Update(&md5, InputK, 0x40);
+    MD5_Final(tbc2->CryptBlock + 0x1018, &md5);
+
 	//md5_state_t md5s;
 	//md5_init(&md5s);
 	//md5_append(&md5s, InputK, 0x40),
@@ -575,8 +585,8 @@ void CTRCrypt2::Tabula_CryptInit2(TABULACRYPT2 *tbc2, uint8_t *InputK)
 
 void CTRCrypt2::Tabula_Encrypt2(TABULACRYPT2 *tbc2, uint32_t *PacketData, uint32_t Len)
 {
-	if( Len & 7 )
-		__debugbreak(); //Not possible!
+	//if( Len & 7 )
+		//__debugbreak(); //Not possible!
 	
 	uint32_t X = SwitchEndianInt(((uint32_t*)tbc2->CryptBlock)[(0x1018)/4]);
 	uint32_t Y = SwitchEndianInt(((uint32_t*)tbc2->CryptBlock)[(0x101C)/4]);
@@ -643,7 +653,7 @@ void CTRCrypt2::DH_UpdateB(BIGNUM* newB)
     BN_copy(bnB, newB);
     BN_mod_exp(bnK,        bnB,               dh->priv_key,        dh->p,              bn_ctx);
     //Init Tabula_Crypt2
-    uint8_t K[0x40];// = {0};
+    uint8_t K[0x40] = {0};
     BN_bn2bin(bnK, K);
     Tabula_CryptInit2(&tbc2, K);
 } 
@@ -655,4 +665,8 @@ const BIGNUM* CTRCrypt2::K() const
 void CTRCrypt2::encrypt(uint32_t* packet_data, uint32_t len)
 {
     Tabula_Encrypt2(&tbc2, packet_data, len);
+}
+void CTRCrypt2::decrypt(uint32_t* packet_data, uint32_t len)
+{
+    Tabula_Decrypt2(&tbc2, packet_data, len);
 }

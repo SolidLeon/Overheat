@@ -35,6 +35,7 @@ void CConnection::on_read()
 	} 
 	catch(CConnectionClosedEx ex)
 	{
+        close();
 		throw;
 	}
 }

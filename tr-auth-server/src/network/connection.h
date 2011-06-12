@@ -43,7 +43,7 @@ namespace tr
 			CConnection( CSocket& socket, CSelector& selector );
 			~CConnection()
 			{
-				delete[] ip;
+				//delete[] ip;
 			}
 			//Event Handler
 			virtual void on_accept() = 0;

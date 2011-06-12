@@ -12,9 +12,10 @@
 
 #include "types.h"
 #include <string>
-#include "md5.h"
+//#include "md5.h"
 #include <openssl/dh.h>
 #include <openssl/bn.h>
+#include <openssl/md5.h>
 
 #define BYTE1(x) ((x&0xFF00)>>8)
 #define _BYTE	uint8_t
@@ -74,6 +75,7 @@ namespace tr
             const BIGNUM* K() const;
             
             void encrypt(uint32_t* packet_data, uint32_t len);
+            void decrypt(uint32_t* packet_data, uint32_t len);
 		private:	
 		};
 	}
