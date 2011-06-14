@@ -36,9 +36,9 @@ namespace tr
 		{
 		public:
 			enum AuthState {
-				CONNECTED,
-				AUTHED_GG,
-                AUTHED_GG_FIRST,
+				CONNECTED, //Needs first AUTH
+				AUTHED_GG, //Needs DH KeyExchange
+                AUTHED_GG_FIRST, //Connected to GameServer PORT
                 CONNECTED_TO_GAME
 			};
 		private:

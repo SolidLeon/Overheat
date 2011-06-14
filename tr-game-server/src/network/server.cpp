@@ -66,7 +66,7 @@ void CServer::start()
             break;
     }
     printf(">>--------------------------------------------------<<\n");
-    printf(">> Start Game Server on port %d (%s)<<\n", 
+    printf(">> Start Game Server on port %d (%s) <<\n", 
            p,s.c_str());
     printf(">>--------------------------------------------------<<\n");
     
@@ -119,31 +119,32 @@ void CServer::main_loop()
             }
 			con->on_accept( game_server.get_ip(), game_server.get_auth_port1() );
 		}
-		for( int i = 0; i < clients.size(); i++ )
-		{			
-			if( !clients[i]->get_socket().get_socket() )
-				continue;
-			if( selector.is_readable( clients[i]->get_socket().get_socket() ) )
-			{
-				//onread				
-				//packet::CPacketBuffer pbRead(8192);
-				//clients[i]->get_socket().read(pbRead);
-				//TODO:
-				// call the on_read method of the appropiate, Connection class				
-				//on_read(clients[i]->get_socket(), pbRead);
-                char sbuf[30];
-                sprintf(sbuf, "Read from client %s\n", clients[i]->get_ip().c_str());
-				::log.info(sbuf);
-				
-				clients[i]->on_read();
-				
-			}
-			if( selector.is_writeable( clients[i]->get_socket().get_socket() ))
-			{
-				//onwrite
-				
-			}
-		}
+        
+            for( int i = 0; i < clients.size(); i++ )
+            {			
+                if( !clients[i]->get_socket().get_socket() )
+                    continue;
+                if( selector.is_readable( clients[i]->get_socket().get_socket() ) )
+                {
+                    //onread				
+                    //packet::CPacketBuffer pbRead(8192);
+                    //clients[i]->get_socket().read(pbRead);
+                    //TODO:
+                    // call the on_read method of the appropiate, Connection class				
+                    //on_read(clients[i]->get_socket(), pbRead);
+                    char sbuf[30];
+                    sprintf(sbuf, "Read from client %s\n", clients[i]->get_ip().c_str());
+                    ::log.info(sbuf);
+                    
+                    clients[i]->on_read();
+                    
+                }
+                if( selector.is_writeable( clients[i]->get_socket().get_socket() ))
+                {
+                    //onwrite
+                    
+                }
+        }
 		
 	}
 

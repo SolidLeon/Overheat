@@ -11,16 +11,17 @@
 #define _CLOSECONNECTIONEX_H_
 
 #include <string>
+#include <stdexcept>
 
 namespace tr
 {
 	namespace net
 	{
-		class CConnectionClosedEx
+		class CConnectionClosedEx : public std::runtime_error
 		{
 		private:
 		public:
-			CConnectionClosedEx(){}
+			CConnectionClosedEx() : std::runtime_error("Connection is Closed"){}
 		}; //CConnectionClosedEx
 	}//net
 }//tr

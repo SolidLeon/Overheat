@@ -171,14 +171,15 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
             return;
         }
         uint8_t B[0x40];
-        memcpy((void*)B, (void*)(m_in.array() + 8), 0x40);
+        memcpy((void*)B, (void*)(m_in.array() + 8), 0x40); //+8: skip header, and BLen
         BIGNUM *b = BN_new();
         BN_bin2bn(B, 0x40, b);
         crypt.DH_UpdateB(b);
         //DH Key Exchange completed
         
-        //Check encryption
-        /*unsigned char test_data[] = {
+        /*//Check encryption
+        printf("\n\n== ENCRYPTION CHECK==\n");
+        unsigned char test_data[] = {
             0x08, 0x00, 0x00, 0x00,
             0x02, 0x00,
             'E', 'N', 'C', ' ', 'O', 'K'
@@ -207,7 +208,7 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         {
             printf("%02X(%c)  ", decrypted[i], (decrypted[i] >= 'A' && decrypted[i]<='Z'?decrypted[i]: ' '));
         }
-        printf("\n");*/
+        printf("\n\n");*/
         
         //SMSG_ENCOK
         m_out.clear();
@@ -227,10 +228,23 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         CConnection::send(m_out);//CLIENT DISCONNECTS RIGHT HERE
         //???: Encryption wrong?
         printf("Sent SMSG_ENCOK to %s\n", ip);
+        //DROP CLIENT
+        return;
+        //CMSG_AUTH_VERSION_CHECK
+        printf("READ CMSG_AUTH_VERSION_CHECK\n");
+        m_in.clear();
+        try {CConnection::on_read();}catch(CConnectionClosedEx& ex) {close();return;}
+        m_in.rewind();
+        
+        crypt.decrypt((uint32_t*)(m_in.array()+4), *(unsigned int*)m_in.array()[0] + 4);
+        
+        m_in.debug_out();
+        
         
         
         printf("Pass Client to GameServer...\n");
-        close();
+        //state = AUTHED_GG_FIRST;
+        //close();
     }
     else if( state == AUTHED_GG_FIRST )
     {
@@ -245,6 +259,9 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
 
 void TRConnection::on_read()
 {
+    if( state != AUTHED_GG_FIRST )
+        return;
+    //state = AUTHED_GG_FIRST, reads appear here
 	if( is_closed() || is_close_requested() )
 		return;
     printf("TRConnection: on_read() from %s\n", ip);
@@ -252,8 +269,9 @@ void TRConnection::on_read()
 	{
 		CConnection::on_read();
 	}
-	catch( CConnectionClosedEx ex )
+	catch( CConnectionClosedEx& ex )
 	{
+        printf("CConnection::on_read() failed!\n");
 		close();
 		return;
 	}

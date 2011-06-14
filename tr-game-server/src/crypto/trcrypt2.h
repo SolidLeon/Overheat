@@ -34,6 +34,7 @@ namespace tr
 				unsigned char K[0x40]; //Backup of K
 			}TABULACRYPT2;
 			
+            static const uint8_t DH_Constant_Prime[0x40];
 			static uint8_t UnknownCryptTable1_BAE6D0[];
 			static uint8_t InputK[0x40];
 			static uint8_t CompareD[0x1018 + 0x10];

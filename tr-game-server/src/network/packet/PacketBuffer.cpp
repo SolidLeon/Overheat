@@ -86,13 +86,13 @@ uint16_t CPacketBuffer::getUShort()
 	uint16_t v = 0;
 	if( m_bo == BO_BIG_ENDIAN )
 	{
-		v = m_buf[m_position]<<8;
-		v = m_buf[m_position+1];
+		v |= m_buf[m_position]<<8;
+		v |= m_buf[m_position+1];
 	}
 	else 
 	{
-		v = m_buf[m_position];
-		v = m_buf[m_position+1]<<8;
+		v |= m_buf[m_position];
+		v |= m_buf[m_position+1]<<8;
 	}
 	m_position += 2;
 	return v;
@@ -103,17 +103,17 @@ uint32_t CPacketBuffer::getUInt()
 	uint32_t v = 0;
 	if( m_bo == BO_BIG_ENDIAN )
 	{
-		v = m_buf[m_position]<<24;
-		v = m_buf[m_position+1]<<16;
-		v = m_buf[m_position+2]<<8;
-		v = m_buf[m_position+3];
+		v |= m_buf[m_position]<<24;
+		v |= m_buf[m_position+1]<<16;
+		v |= m_buf[m_position+2]<<8;
+		v |= m_buf[m_position+3];
 	}
 	else 
 	{
-		v = m_buf[m_position];
-		v = m_buf[m_position+1]<<8;
-		v = m_buf[m_position+2]<<16;
-		v = m_buf[m_position+3]<<24;
+		v |= m_buf[m_position];
+		v |= m_buf[m_position+1]<<8;
+		v |= m_buf[m_position+2]<<16;
+		v |= m_buf[m_position+3]<<24;
 	}
 	m_position += 4;
 	return v;

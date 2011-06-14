@@ -31,7 +31,7 @@ void CConnection::on_read()
 	//printf("CConnection: on_read\n");
 	try 
 	{
-		socket.read( m_in );
+		return socket.read( m_in );
 	} 
 	catch(CConnectionClosedEx ex)
 	{

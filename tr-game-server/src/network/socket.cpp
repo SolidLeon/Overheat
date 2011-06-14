@@ -126,7 +126,13 @@ int CSocket::read( char* buf, int size )
 void CSocket::read( packet::CPacketBuffer& pb )
 {
 	pb.clear();
-	pb.position( read( (char*) pb.array(), pb.capacity() ));
+    try {
+        pb.position( read( (char*) pb.array(), pb.capacity() ));
+    }
+    catch( CConnectionClosedEx& ex )
+    {
+        throw;
+    }
 	pb.flip();
 }
 
