@@ -298,12 +298,12 @@ uint8_t CompareD[0x1018 + 0x10] =
 //int __usercall sub_709330<eax>(uint32_t *result<eax>, uint32_t *a2<esi>)
 void CTRCrypt2::sub_709330(uint32_t *result, uint32_t *a2)
 {
-	uint64_t v2; // edx@1
-	uint64_t v3; // ecx@1
-	uint64_t v4; // edx@1
-	uint64_t v5; // ecx@1
-	uint64_t v6; // edi@1
-	int64_t v7; // edx@1
+	uint32_t v2; // edx@1
+	uint32_t v3; // ecx@1
+	uint32_t v4; // edx@1
+	uint32_t v5; // ecx@1
+	uint32_t v6; // edi@1
+	int32_t v7; // edx@1
 	
 	v2 = *result ^ *a2;
 	v3 = *(a2 + 1) ^ *(result + 1) ^ (result[(_BYTE)v2 + 774]
@@ -330,7 +330,7 @@ void CTRCrypt2::Copy_708C60(uint8_t *input, uint8_t *output)
 	uint8_t *v5; // edi@1
 	int64_t v6; // esi@1
 	int64_t v7; // eax@2
-	int64_t v8; // edx@2
+	int32_t v8; // edx@2
 	int64_t v9; // eax@4
 	int64_t v10; // edx@4
 	int64_t v11; // eax@6
@@ -338,35 +338,35 @@ void CTRCrypt2::Copy_708C60(uint8_t *input, uint8_t *output)
 	int64_t v13; // eax@8
 	int64_t v14; // edx@8
 	int64_t v15; // eax@10
-	int64_t v16; // edx@10
+	int32_t v16; // edx@10
 	int64_t v17; // eax@12
-	int64_t v18; // edx@12
+	int32_t v18; // edx@12
 	int64_t v19; // eax@14
-	int64_t v20; // edx@14
+	int32_t v20; // edx@14
 	int64_t v21; // eax@16
-	int64_t v22; // edx@16
+	int32_t v22; // edx@16
 	int64_t v23; // eax@18
-	int64_t v24; // edx@18
+	int32_t v24; // edx@18
 	int64_t v25; // eax@20
-	int64_t v26; // edx@20
+	int32_t v26; // edx@20
 	int64_t v27; // eax@22
 	int64_t v28; // edx@22
 	int64_t v29; // edx@24
-	int64_t v30; // edi@27
-	int64_t v31; // edi@29
+	int32_t v30; // edi@27
+	int32_t v31; // edi@29
 	//int64_t result; // eax@30
-	int64_t v33; // ebp@4
-	int64_t v34; // ebp@6
-	int64_t v35; // ebp@8
-	int64_t v36; // ebp@22
-	int64_t v37; // ebp@24
+	int32_t v33; // ebp@4
+	int32_t v34; // ebp@6
+	int32_t v35; // ebp@8
+	int32_t v36; // ebp@22
+	int32_t v37; // ebp@24
 	//int64_t v39; // ecx@28
-	uint64_t a2[2]; // [sp+Ch] [bp-8h]@27
+	uint32_t a2[2]; // [sp+Ch] [bp-8h]@27
 						//int v41; // [sp+10h] [bp-4h]@27
 	
 	v4 = output;
 	v5 = input;
-	memset(output, 0, 0x1018);
+	memset(output, 0, 0x1018u);
 	memcpy(v4, UnknownCryptTable1_BAE6D0, 0x1018u);
 	v2 = (int64_t)v5;
 	v3 = (int64_t)(v5 + 8);
@@ -494,12 +494,12 @@ void CTRCrypt2::__Tabula_Decrypt2(uint32_t *result, uint32_t *a2, uint32_t *X, u
 	uint32_t X2 = a2[0];
 	uint32_t Y2 = a2[1];
 	
-	uint64_t v2; // edx@1
-	uint64_t v3; // ecx@1
-	uint64_t v4; // edx@1
-	uint64_t v5; // ecx@1
-	uint64_t v6; // edi@1
-	uint64_t v7; // edx@1
+	uint32_t v2; // edx@1
+	uint32_t v3; // ecx@1
+	uint32_t v4; // edx@1
+	uint32_t v5; // ecx@1
+	uint32_t v6; // edi@1
+	uint32_t v7; // edx@1
 	
 	v2 = *a2 ^ *(result + 5);
 	v3 = *(a2 + 1) ^ *(result + 4) ^ (result[(uint8_t)v2 + 774]
@@ -540,12 +540,12 @@ void CTRCrypt2::__Tabula_Encrypt2(uint32_t *result, uint32_t *a2, uint32_t *X, u
 				//Do main encryption
 	
 	
-	uint64_t v2; // edx@1
-	uint64_t v3; // ecx@1
-	uint64_t v4; // edx@1
-	uint64_t v5; // ecx@1
-	uint64_t v6; // edi@1
-	uint64_t v7; // edx@1
+	uint32_t v2; // edx@1
+	uint32_t v3; // ecx@1
+	uint32_t v4; // edx@1
+	uint32_t v5; // ecx@1
+	uint32_t v6; // edi@1
+	uint32_t v7; // edx@1
 	
 	v2 = *result ^ *a2;
 	v3 = *(a2 + 1) ^ *(result + 1) ^ (result[(uint8_t)v2 + 774]

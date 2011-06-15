@@ -153,6 +153,22 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         m_out.putArray(P, 0x40);
         m_out.put(0x05);
         m_out.flip();
+        
+        /*m_out.clear();
+        uint8_t smsg_gl_serverkey[] = {
+            0x8D, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,
+            0x13, 0xE1, 0xB1, 0x6D, 0x1C, 0x85, 0xF2, 0x5F, 0x4D, 0xBB, 0x8D, 0x25, 0x95, 0x93, 0x84, 0x15,
+            0x05, 0x21, 0x74, 0xAA, 0xBC, 0x03, 0x60, 0x03, 0xC8, 0xDF, 0xFD, 0x82, 0xE8, 0x45, 0x87, 0x86,
+            0x94, 0xD1, 0xE7, 0xFA, 0xAC, 0x30, 0xBC, 0xA4, 0xAF, 0x75, 0x54, 0xAF, 0xB0, 0xF0, 0x4B, 0xDA,
+            0x04, 0x87, 0xF7, 0xB9, 0x80, 0x18, 0x40, 0xDE, 0x4E, 0x09, 0x8E, 0xF8, 0xB5, 0x16, 0x98, 0x3E,
+            0x98, 0x0F, 0x91, 0xEA, 0xAD, 0xAD, 0x8E, 0x7D, 0xF9, 0xEC, 0x43, 0x1D, 0xD4, 0x1C, 0xEF, 0x3F,
+            0xBE, 0xCF, 0xD1, 0xAE, 0xD2, 0x77, 0x1C, 0xCF, 0xF8, 0x5E, 0xF8, 0x85, 0x3E, 0x2F, 0x9B, 0xC8,
+            0x30, 0x2E, 0xD3, 0xC4, 0x7F, 0xE6, 0x29, 0x72, 0xE0, 0x08, 0xE9, 0x32, 0x53, 0x97, 0xDB, 0x41,
+            0x37, 0x98, 0xB3, 0x8A, 0xDC, 0xB8, 0xAF, 0xD3, 0x6A, 0x69, 0xD5, 0x12, 0xEC, 0x32, 0x61, 0xAF,
+            0x05
+        };
+        m_out.putArray(smsg_gl_serverkey, 0x8D+4);
+        m_out.flip();*/
         CConnection::send( m_out );
         
         //CMSG_AUTH_B
@@ -224,25 +240,24 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
         
         m_out.flip();
         //m_out.debug_out();
-        crypt.encrypt((uint32_t*)(m_out.array()+4), 8);
+        crypt.encrypt((uint32_t*)(m_out.array()+4), 0x08);
+        
         CConnection::send(m_out);//CLIENT DISCONNECTS RIGHT HERE
+        
         //???: Encryption wrong?
         printf("Sent SMSG_ENCOK to %s\n", ip);
         //DROP CLIENT
-        return;
+        //return;
         //CMSG_AUTH_VERSION_CHECK
-        printf("READ CMSG_AUTH_VERSION_CHECK\n");
+        /*printf("READ CMSG_AUTH_VERSION_CHECK\n");
         m_in.clear();
         try {CConnection::on_read();}catch(CConnectionClosedEx& ex) {close();return;}
         m_in.rewind();
-        
-        crypt.decrypt((uint32_t*)(m_in.array()+4), *(unsigned int*)m_in.array()[0] + 4);
-        
         m_in.debug_out();
         
         
-        
-        printf("Pass Client to GameServer...\n");
+        close();*/
+        return;
         //state = AUTHED_GG_FIRST;
         //close();
     }
@@ -259,8 +274,6 @@ void TRConnection::on_accept( uint32_t gs_ip, uint32_t gs_port )
 
 void TRConnection::on_read()
 {
-    if( state != AUTHED_GG_FIRST )
-        return;
     //state = AUTHED_GG_FIRST, reads appear here
 	if( is_closed() || is_close_requested() )
 		return;
@@ -280,31 +293,125 @@ void TRConnection::on_read()
     printf("TRConnection: read data from %s\n", ip);
     printf("DATA:\n");
     m_in.debug_out();
-    sleep(5);
     
-//    crypt.decrypt((uint32_t*)(m_in.array()+4), packet_size);
-	
-	int packet_size = *(unsigned short*) m_in.array();
-	if( packet_size != m_in.limit() )
-	{
-		//::log.info("ERROR: Wrong packet size");
-		printf("ERROR: Wrong packet size");
-	}
-		
-	//Each Packet is BF encrypted
-	for(int i=0; i<(packet_size-2)/8; i++)
-	{
-		CCryptMgr::instance().get_blowfish().BFDecrypt((uint32_t*)&(m_in.array()[2+i*8]), 
-											(uint32_t*)&(m_in.array()[2+i*8+4]));
-	}
-	//m_in.debug_out();
-	int opcode = m_in.array()[2];
-	
+    //decrypt
+    crypt.decrypt((uint32_t*)(m_in.array()+4), m_in.limit());
+    m_in.debug_out();
+    
+    int pLen = m_in.getUInt();
+    int alignBytes = m_in.get();
+    m_in.position(m_in.position() + alignBytes-1);
+    
+    //decode PACKET
+    uint32_t subSize = m_in.getUShort();
+    uint32_t majorOpcode = m_in.getUShort();
+    if( majorOpcode )
+    {
+        printf("ERROR: MAJOR OPCODE\n");
+        //ignore these packets
+        return;
+    }
+    uint8_t unk1 = m_in.get();
+    if( unk1 != 2 )
+    {
+        sleep(5);
+    }
+    uint8_t opcode = m_in.get();
+    uint8_t unk2 = m_in.get();
+    if( unk2 != 0 ) 
+    {
+        printf("UNK2 != 0\n");
+        sleep(5);
+    }
+    uint8_t xorCheckA = m_in.get();
+    if( xorCheckA != 3 )
+        sleep(5);
+    uint32_t hdrB_start = m_in.position();
+    uint8_t unk3 = m_in.get();
+    if( unk3 != 3 ) 
+    {
+        printf("UNK3 != 3\n");
+        sleep(5);
+    }
+    
 	switch ( opcode )
 	{
-	default:
-		close();
-		break;
+        case 0x02:
+        {
+            if( m_in.get() != 0x29 )
+                sleep(5);
+            uint8_t unk02_1 = m_in.get();
+            if( unk02_1 != 3 )
+                sleep(5);
+            uint8_t unk02_2 = m_in.get();
+            if( unk02_2 != 1 )
+                sleep(5);
+            uint8_t preffix02_1 = m_in.get();
+            if( preffix02_1 != 7 )
+                sleep(5);
+            uint32_t sessionId2 = m_in.getUInt();
+            uint8_t preffix02_2 = m_in.get();
+            if( preffix02_2 != 7 )
+                sleep(5);
+            uint32_t sessionId1 = m_in.getUInt();
+            uint8_t unk02_3 = m_in.get();
+            if( unk02_3 != 0xD )
+                sleep(5);
+            //part 2
+            if(m_in.get() != 0xCB)
+                sleep(5);
+            
+            uint32_t version_len = m_in.get();
+            bool wrongVersion = false;
+            if( version_len != 8 )
+                wrongVersion = true;
+            if( !wrongVersion )
+            {
+                if( memcmp(m_in.array() + m_in.position(), "1.11.6.0", version_len))
+                    wrongVersion = true;
+            }
+            m_in.position(m_in.position() + version_len);
+            if( wrongVersion ) 
+            {
+                close();
+                return;
+            }
+            uint8_t unk02_4 = m_in.get();
+            if( unk02_4 != 0x2A )
+            {
+                close();
+                return;
+            }
+            //check session
+            //Query session
+            std::stringstream sql;
+            sql << "SELECT session_id1, session_id2, uid, account FROM sessions WHERE session_id1 = ";
+            sql << sessionId1;
+            sql << " AND session_id2 = ";
+            sql << sessionId2;
+            printf("QUERY:\n");
+            printf("%s\n", sql.str().c_str());
+            tr::util::DBMgr::get_instance().query(sql.str().c_str());
+            MYSQL_RES* res = tr::util::DBMgr::get_instance().store_result();
+            uint64_t num_rows = tr::util::DBMgr::get_instance().num_rows(res);
+            if( num_rows == 1 )
+            {
+                printf("[GameServer] Client Successfully connected to GS, with valid SESSION: %s\n", ip);
+                //Begin charselection
+                return;
+            }
+            //invalid session
+            printf("[GameServer] Client sent invalid SESSION: %s\n", ip);
+            printf("id1: '%u'\n", sessionId1);
+            printf("id2: '%u'\n", sessionId2);
+            close();
+            return;
+        }
+            break;
+        default:
+            printf("[GameServer] received unknown opcode from %s: %02X\n", ip, opcode);
+            close();
+            break;
 	}
 }
 

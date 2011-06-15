@@ -23,8 +23,34 @@ void* game_auth_gg_main(void* param);
 void* game_auth1_main(void* param);
 void* game_auth2_main(void* param);
 
+void HexOut(uint8_t* data, size_t len)
+{
+    for(int i = 0; i < len; i++)
+    {
+        if(i%0x10==0) {
+            printf("\n%04X: ", i);
+        }
+        printf("%02X  ", data[i]);
+        
+    }
+    printf("\n");
+    for(int i = 0; i < len; i++)
+    {
+        if(i%0x10==0) {
+            printf("\n%04X: ", i);
+        }
+            
+        if((data[i] >= 'A' && data[i] <= 'Z') || (data[i]>='a' && data[i]<='z') || (data[i]>='0' && data[i]<='9'))
+            printf("%c", data[i]);
+        else
+            printf(".");
+    }
+    printf("\n\n");
+}
+
 int main (int argc, char * const argv[]) 
 {	
+    
 	printf(" ==============================================================================\r\n");
 	printf("                                    Overheat                                   \r\n");
 	printf("                                Auth Game Server                            \r\n\r\n");

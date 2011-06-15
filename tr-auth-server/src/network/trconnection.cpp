@@ -35,7 +35,7 @@ void TRConnection::on_accept()
 	printf("AUTHED");
 }
 
-void TRConnection::on_read() throw(CConnectionClosedEx)
+void TRConnection::on_read()
 {
 	if( is_closed() || is_close_requested() )
 		return;

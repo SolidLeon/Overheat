@@ -65,6 +65,11 @@ namespace tr
             
             //Diffie Hellman
             void setup_dh();
+            void setup_dh_test(uint8_t* A, uint8_t* B, uint8_t* K, uint8_t* P) 
+            {
+                //BN_bin2bn(B, 0x40, bnB);
+                Tabula_CryptInit2(&tbc2, K);
+            }
             
             //Public Key, generator ^ priv_key
             const BIGNUM* A() const;
