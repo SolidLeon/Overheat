@@ -152,6 +152,20 @@ void CPacketBuffer::putUShort( uint16_t h )
 	}
 	m_position += 2;
 }
+void CPacketBuffer::putUShort( uint16_t h, uint64_t pos )
+{
+	if( m_bo == BO_BIG_ENDIAN )
+	{
+		m_buf[pos]	= (uint8_t)(h>>8);
+		m_buf[pos+1] = (uint8_t)h;
+	}
+	else
+	{
+		m_buf[pos]	= (uint8_t)h;
+		m_buf[pos+1]	= (uint8_t)(h>>8);
+	}
+	m_position += 2;
+}
 
 void CPacketBuffer::putUInt( uint32_t d ) 
 {

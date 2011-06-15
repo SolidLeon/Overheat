@@ -394,10 +394,32 @@ void TRConnection::on_read()
             tr::util::DBMgr::get_instance().query(sql.str().c_str());
             MYSQL_RES* res = tr::util::DBMgr::get_instance().store_result();
             uint64_t num_rows = tr::util::DBMgr::get_instance().num_rows(res);
+            MYSQL_ROW row = tr::util::DBMgr::get_instance().fetch_row(res);
             if( num_rows == 1 )
             {
+                this->session.update(sessionId1, sessionId2);
+                UID = atoi(row[2]);
                 printf("[GameServer] Client Successfully connected to GS, with valid SESSION: %s\n", ip);
+                
                 //Begin charselection
+                pym.init();
+                pym.tuple_begin();
+                pym.addUnicode("FamilyName");
+                pym.addInt(1);//hasCharacters
+                pym.addInt(UID); //userId
+                pym.tuple_begin();
+                pym.addInt(1); //human
+                pym.addInt(0); //forean_hybrid
+                pym.addInt(0); //brann_hybrid
+                pym.addInt(0); //thrax_hybrid
+                pym.tuple_end();
+                pym.addInt(1); //bCanSkipBootcamp
+                pym.tuple_end();
+                
+                methodCallRaw(5, 413);
+                
+                //m_out.flip();
+                //CConnection::send(m_out);
                 return;
             }
             //invalid session
@@ -413,6 +435,114 @@ void TRConnection::on_read()
             close();
             break;
 	}
+}
+
+void TRConnection::methodCallRaw(uint32_t entityId, uint32_t MethodID/*, uint8_t* pyObjString, int pyObjLen*/)
+{
+    m_out.clear();
+    
+    //AlignBytes
+    m_out.put(0x01);
+    int LenBegin = m_out.position();
+    
+    //SubSize
+    m_out.putUShort(0x41);
+    
+    //Opcode
+    m_out.put(0x00);
+    m_out.put(1);
+    
+    int XORCheck = m_out.position();
+    //datablock 1 (header)
+    m_out.put(0); //2:6 mask
+    m_out.put((7<<1)|(0)); //Opcode and flag --> 7 means the main packet handler
+    m_out.put(GEN_XOR_BYTE(m_out.position() - XORCheck));
+    XORCheck = m_out.position();
+    //datablock 2 (header 2)
+    m_out.put(0x00); //compression
+    //OPD1:
+    m_out.put(0x01);
+    //EntityID
+    if( entityId == 0 )
+    {
+        m_out.put(0);
+    }
+    else
+    {
+        while( entityId ) 
+        {
+            if( entityId&~0x7F )
+                m_out.put( (entityId&0x7F)|0x80 );
+            else
+                m_out.put( entityId&0x7F );
+            entityId >>= 7;
+        }
+    }
+    
+    //MethodID
+    if( MethodID <= 0x7F )
+    {
+        m_out.put(MethodID);
+    }
+    else if( MethodID <= 0x3FFF )
+    {
+        m_out.put( 0x80 | (MethodID&0x7F) );
+        m_out.put( MethodID>>7 );
+    } 
+    else if( MethodID <= 0x1FFFFF )
+    {
+        m_out.put( 0x80 | (MethodID&0x7F) );
+        m_out.put( 0x80 | ((MethodID>>7)&0x7F) );
+        m_out.put( MethodID>>14 );
+    } 
+    else if( MethodID <= 0xFFFFFFF )
+    {
+        m_out.put( 0x80 | (MethodID&0x7F) );
+        m_out.put( 0x80 | ((MethodID>>7)&0x7F) );
+        m_out.put( 0x80 | ((MethodID>>14)&0x7F) );
+        m_out.put( MethodID>>21 );
+    } 
+    else
+    {
+        printf("ERROR: MethodID???\n");
+    }
+    
+    //Parameter Block
+    //add block size placeholder
+    m_out.put(0xFF).put(0xFF);
+    int ParamBlockBegin = m_out.position();
+    m_out.put('M');
+    m_out.putUInt( pym.getLen() );
+    m_out.putArray( pym.getData(), pym.getLen() );
+    m_out.put(0x66);
+    
+    int PBLen = m_out.position() - ParamBlockBegin;
+    if( PBLen > 0xFFF )
+    {
+        printf("ERROR PBLen > 0xFFF\n");
+        sleep(5);
+    }
+    
+    m_out.array()[ParamBlockBegin-2] = (PBLen&0x3F) | 0x40;
+    m_out.array()[ParamBlockBegin-1] = PBLen>>6;
+    //Follower
+    m_out.put(GEN_XOR_BYTE(m_out.position() - XORCheck));
+    XORCheck = m_out.position();
+    //Last Checksum
+    m_out.put(0x06).put(0x06);
+    
+    //Align len to 8 (-1)
+    int LenNow = m_out.position() - LenBegin;
+    int PaddingNeeded = (8-((LenNow+1)%8))%8;
+    for(int x=0;x<PaddingNeeded;x++)
+        m_out.put('?');
+    //uint8_t*arr = m_out.array();
+    
+    //*(uint16_t*)(arr[LenBegin]) = m_out.position() - LenBegin;
+    m_out.putUShort(m_out.position() - LenBegin, LenBegin);
+    crypt.encrypt((uint32_t*)(m_out.array()+4), m_out.position()-4);
+    m_out.flip();
+    CConnection::send( m_out );
 }
 
 void TRConnection::on_write()

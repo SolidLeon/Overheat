@@ -57,6 +57,7 @@ namespace tr
 				void putArray( uint8_t*, int len );
 				void putChar( char );
 				void putUShort( uint16_t );
+				void putUShort( uint16_t, uint64_t );
 				void putUInt( uint32_t );
 				
 				CPacketBuffer& operator<<( uint8_t );

@@ -10,6 +10,8 @@
 #ifndef _TRCONNECTION_H_
 #define _TRCONNECTION_H_
 
+#define GEN_XOR_BYTE(x) ((x&0xFF)^((x>>8)&0xFF)^((x>>16)&0xFF)^((x>>24)&0xFF))
+
 #include "connection.h"  //CConnection
 //#include "socket.h" //CSocket
 //#include "selector.h" //CSelector
@@ -20,6 +22,7 @@
 #include "DBMgr.h"
 #include "Session.h"
 #include "serverpacket.h"
+#include "PyMarshal.h"
 
 #include <string>
 
@@ -51,6 +54,7 @@ namespace tr
             
             CSession session;
             crypto::CTRCrypt2 crypt; 
+            packet::CPyMarshal pym;
 		public:
 			TRConnection( CSocket& socket, CSelector& selector)
 			: CConnection( socket, selector ), crypt()
@@ -81,6 +85,7 @@ namespace tr
 			virtual void on_read();
 			virtual void on_write();
 			virtual void on_disconnect();
+            void methodCallRaw(uint32_t entityId, uint32_t MethodID/*, uint8_t* pyObjString, int pyObjLen*/);
 			
 			void send();
 			
